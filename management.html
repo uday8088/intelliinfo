@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Management Approach – Intelli Infotech Inc.</title>
+  <meta name="description" content="Intelli Infotech's project management methodology — iterative development, RUP phases, and engineering disciplines." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <style>
+    .ii-hero { background: linear-gradient(135deg,#fff 60%,#fff0f5 100%); border-left: 4px solid var(--accent); padding: 24px 28px 20px 24px; margin-bottom: 28px; border-radius: 0 4px 4px 0; }
+    .ii-hero__label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .ii-hero__headline { font-size: 24px; font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 10px; letter-spacing: -.3px; }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body { font-size: 14px; line-height: 1.7; color: var(--text-soft); max-width: 780px; }
+    .ii-section-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .ii-section-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .ii-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-bottom: 32px; }
+    .ii-cards--2 { grid-template-columns: repeat(2,1fr); }
+    .ii-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 20px 18px 18px; border-radius: 0 0 4px 4px; transition: transform .22s,box-shadow .22s,border-top-color .22s; cursor: default; }
+    .ii-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(229,0,95,.10),0 2px 8px rgba(0,0,0,.07); border-top-color: var(--accent-dark); }
+    .ii-card__icon { font-size: 22px; margin-bottom: 10px; }
+    .ii-card__title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .ii-card__body { font-size: 13px; line-height: 1.65; color: var(--text-soft); margin: 0; padding: 0; }
+    .ii-card__body li { list-style: none; padding: 3px 0; display: flex; gap: 7px; align-items: flex-start; }
+    .ii-card__body li::before { content: '–'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+    /* RUP phase pills */
+    .ii-phases { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 32px; }
+    .ii-phase { border: 1px solid var(--border); border-top: 3px solid var(--accent); background: var(--white); padding: 14px 14px 12px; border-radius: 0 0 4px 4px; transition: transform .22s,box-shadow .22s; cursor: default; }
+    .ii-phase:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(229,0,95,.10); }
+    .ii-phase__num { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 4px; }
+    .ii-phase__name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .ii-phase__desc { font-size: 12.5px; color: var(--text-soft); line-height: 1.5; }
+    @media (max-width: 860px) { .ii-cards { grid-template-columns: repeat(2,1fr); } .ii-phases { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 520px) { .ii-cards,.ii-cards--2,.ii-phases { grid-template-columns: 1fr; } .ii-hero__headline { font-size: 20px; } }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Work Approach — Project Management</div>
+      <h1 class="ii-hero__headline">Iterative, <em>Structured, Delivered</em></h1>
+      <p class="ii-hero__body">We apply proven iterative methodologies — RUP and Agile — adapted to your project's complexity, risk level, and timeline requirements.</p>
+    </div>
+
+    <!-- RUP Phases -->
+    <div class="ii-section-label">RUP Methodology</div>
+    <div class="ii-section-title">Four Phases of Development</div>
+    <div class="ii-phases">
+      <div class="ii-phase">
+        <div class="ii-phase__num">Phase 1</div>
+        <div class="ii-phase__name">Inception</div>
+        <div class="ii-phase__desc">Project scope, feasibility, and initial risk analysis</div>
+      </div>
+      <div class="ii-phase">
+        <div class="ii-phase__num">Phase 2</div>
+        <div class="ii-phase__name">Elaboration</div>
+        <div class="ii-phase__desc">Detailed architecture, development plan, and risk mitigation</div>
+      </div>
+      <div class="ii-phase">
+        <div class="ii-phase__num">Phase 3</div>
+        <div class="ii-phase__name">Construction</div>
+        <div class="ii-phase__desc">Iterative development, testing, and integration</div>
+      </div>
+      <div class="ii-phase">
+        <div class="ii-phase__num">Phase 4</div>
+        <div class="ii-phase__name">Transition</div>
+        <div class="ii-phase__desc">Final testing, user acceptance, and client delivery</div>
+      </div>
+    </div>
+
+    <!-- Engineering Disciplines -->
+    <div class="ii-section-label">Engineering</div>
+    <div class="ii-section-title">Six Engineering Disciplines</div>
+    <div class="ii-cards">
+      <div class="ii-card">
+        <div class="ii-card__icon">🗺️</div>
+        <div class="ii-card__title">Business Modelling</div>
+        <ul class="ii-card__body"><li>Aligning business goals with software architecture and development strategy</li></ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">📋</div>
+        <div class="ii-card__title">Requirements</div>
+        <ul class="ii-card__body"><li>Translating client needs into clear technical specifications and acceptance criteria</li></ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">🧩</div>
+        <div class="ii-card__title">Analysis &amp; Design</div>
+        <ul class="ii-card__body"><li>Defining system structure, component relationships, and code architecture</li></ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">⚙️</div>
+        <div class="ii-card__title">Implementation</div>
+        <ul class="ii-card__body"><li>Building and integrating all components into a functioning system</li></ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">🧪</div>
+        <div class="ii-card__title">Test</div>
+        <ul class="ii-card__body"><li>Verifying integration, validating requirements, and closing all defects</li></ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">🚀</div>
+        <div class="ii-card__title">Deployment</div>
+        <ul class="ii-card__body"><li>Releasing, installing, and supporting delivery to end users</li></ul>
+      </div>
+    </div>
+
+    <!-- Supporting Disciplines -->
+    <div class="ii-section-label">Supporting</div>
+    <div class="ii-section-title">Three Supporting Disciplines</div>
+    <div class="ii-cards ii-cards--2">
+      <div class="ii-card">
+        <div class="ii-card__icon">🔄</div>
+        <div class="ii-card__title">Change Management</div>
+        <ul class="ii-card__body">
+          <li>Version-controlled configuration management</li>
+          <li>Change request tracking and priority management</li>
+        </ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">📊</div>
+        <div class="ii-card__title">Project Management</div>
+        <ul class="ii-card__body">
+          <li>Phase-level and iteration-level planning</li>
+          <li>Milestone tracking and risk monitoring</li>
+        </ul>
+      </div>
+      <div class="ii-card">
+        <div class="ii-card__icon">🛠️</div>
+        <div class="ii-card__title">Environment</div>
+        <ul class="ii-card__body">
+          <li>Dev toolchain, CI/CD, and infrastructure provisioned from day one</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

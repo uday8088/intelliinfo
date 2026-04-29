@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Intelli Infotech Inc.</title>
+  <meta name="description" content="Get in touch with Intelli Infotech Inc. — software development company, Sacramento CA." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    /* ── Hero ── */
+    .ii-hero {
+      background: linear-gradient(135deg, #fff 60%, #fff0f5 100%);
+      border-left: 4px solid var(--accent);
+      padding: 24px 28px 20px 24px;
+      margin-bottom: 32px;
+      border-radius: 0 4px 4px 0;
+    }
+    .ii-hero__label {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+    }
+    .ii-hero__headline {
+      font-size: 24px; font-weight: 700; color: var(--text);
+      line-height: 1.25; margin-bottom: 10px; letter-spacing: -.3px;
+    }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body { font-size: 14px; line-height: 1.7; color: var(--text-soft); max-width: 700px; }
+
+    /* ── Page layout: form left, info right ── */
+    .ii-contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ── Form card ── */
+    .ii-form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 24px 24px 20px;
+      border-radius: 0 0 4px 4px;
+    }
+    .ii-form-card__title {
+      font-size: 14px; font-weight: 700; color: var(--text);
+      margin-bottom: 18px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: .01em;
+    }
+
+    /* ── Row helpers ── */
+    .ii-form-row {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .ii-form-row--2 { grid-template-columns: 1fr 1fr; }
+    .ii-form-row--3 { grid-template-columns: 1fr 1fr 1fr; }
+    .ii-form-row--1 { grid-template-columns: 1fr; }
+
+    /* ── Field ── */
+    .ii-form-group label {
+      display: block;
+      font-size: 12px; font-weight: 600;
+      color: var(--text-soft); margin-bottom: 4px;
+      letter-spacing: .03em; text-transform: uppercase;
+    }
+    .ii-form-group label .req { color: var(--accent); margin-left: 2px; }
+
+    .ii-form-group input,
+    .ii-form-group textarea,
+    .ii-form-group select {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--text);
+      background: var(--white);
+      border-radius: 3px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .ii-form-group input:focus,
+    .ii-form-group textarea:focus,
+    .ii-form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(229, 0, 95, .09);
+    }
+    .ii-form-group textarea { resize: vertical; min-height: 100px; }
+
+    /* ── Submit row ── */
+    .ii-form-footer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .ii-submit-btn {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      padding: 10px 36px;
+      font-family: var(--font);
+      font-size: 13.5px; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      border-radius: 3px; cursor: pointer;
+      transition: background .15s;
+      white-space: nowrap;
+    }
+    .ii-submit-btn:hover { background: var(--accent-dark); }
+    .ii-submit-btn:disabled { opacity: .55; cursor: not-allowed; }
+    .ii-form-note {
+      font-size: 12px; color: var(--text-soft); line-height: 1.5;
+    }
+    .ii-form-note .req { color: var(--accent); }
+
+    /* ── Thank-you state ── */
+    .ii-thankyou {
+      display: none;
+      padding: 24px 22px;
+      border: 1px solid #d4edda;
+      border-left: 4px solid #28a745;
+      background: #f3fbf5;
+      border-radius: 4px;
+    }
+    .ii-thankyou h3 { font-size: 16px; font-weight: 700; color: #1c6e30; margin-bottom: 6px; }
+    .ii-thankyou p  { font-size: 14px; line-height: 1.65; color: var(--text); }
+
+    /* ── Contact info panel ── */
+    .ii-contact-info {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      background: var(--stripe);
+      border-radius: 0 0 4px 4px;
+    }
+    .ii-contact-info__head {
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13.5px; font-weight: 700; color: var(--text);
+    }
+    .ii-contact-block {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ii-contact-block:last-child { border-bottom: none; }
+    .ii-contact-block__label {
+      font-size: 10px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .ii-contact-row {
+      display: flex; gap: 8px;
+      font-size: 13.5px; line-height: 1.65; color: var(--text);
+      align-items: flex-start; margin-bottom: 4px;
+    }
+    .ii-contact-row:last-child { margin-bottom: 0; }
+    .ii-contact-row .ii-lbl {
+      font-weight: 600; color: var(--text-soft);
+      flex-shrink: 0; min-width: 44px; font-size: 12.5px;
+    }
+    .ii-contact-row a { color: var(--accent); }
+    .ii-contact-row a:hover { text-decoration: underline; }
+
+    /* ── Phone country code select ── */
+    .ii-phone-cc {
+      width: 100%;
+      padding: 9px 11px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: var(--white);
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .ii-phone-cc:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(229,0,95,.09);
+    }
+
+    /* ── URL widget ── */
+    .ii-url-wrap {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .ii-url-wrap:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(229,0,95,.09);
+    }
+    .ii-url-prefix {
+      flex-shrink: 0;
+      padding: 9px 10px;
+      background: var(--stripe);
+      border-right: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-soft);
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    .ii-url-input {
+      flex: 1;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      padding: 9px 11px;
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      min-width: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .ii-contact-layout { grid-template-columns: 1fr; }
+      .ii-contact-info { order: -1; }
+    }
+    @media (max-width: 560px) {
+      .ii-form-row--2, .ii-form-row--3 { grid-template-columns: 1fr; }
+      .ii-hero__headline { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <!-- ══ Hero ═══════════════════════════════════════════════════════ -->
+    <div class="ii-hero">
+      <div class="ii-hero__label">Get In Touch</div>
+      <h1 class="ii-hero__headline">Let's Start a <em>Conversation</em></h1>
+      <p class="ii-hero__body">
+        Tell us about your project and we'll respond within one business day.
+        US and India delivery teams available across all time zones.
+      </p>
+    </div>
+
+    <div class="ii-contact-layout">
+
+      <!-- ══ Left: Form ══════════════════════════════════════════════ -->
+      <div>
+
+        <!-- Thank you message -->
+        <div class="ii-thankyou" id="ii-thankyou">
+          <h3>Message received — thank you!</h3>
+          <p>A member of our team will be in touch within one business day.</p>
+        </div>
+
+        <!--
+        ┌─────────────────────────────────────────────────────────────┐
+        │  FORMSPREE SETUP                                            │
+        │  1. Go to https://formspree.io and create a free account.  │
+        │  2. Create a new form — you'll get an endpoint like:        │
+        │       https://formspree.io/f/abcdefgh                       │
+        │  3. Replace YOUR_FORM_ID below with that 8-char ID.        │
+        │     e.g.  action="https://formspree.io/f/abcdefgh"         │
+        └─────────────────────────────────────────────────────────────┘
+        -->
+        <form
+          id="ii-contact-form"
+          action="https://formspree.io/f/mqeyeapo"
+          method="POST"
+          novalidate
+        >
+          <div class="ii-form-card">
+            <div class="ii-form-card__title">Project Enquiry Form</div>
+
+            <!-- Row 1: Name · Email -->
+            <div class="ii-form-row ii-form-row--2">
+              <div class="ii-form-group">
+                <label for="cf-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="cf-name" name="name" required maxlength="128" autocomplete="name" placeholder="Jane Smith" />
+              </div>
+              <div class="ii-form-group">
+                <label for="cf-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="cf-email" name="email" required maxlength="128" autocomplete="email" placeholder="jane@company.com" />
+              </div>
+            </div>
+
+            <!-- Row 2: Country Code · Phone · Company -->
+            <div class="ii-form-row ii-form-row--3">
+              <div class="ii-form-group">
+                <label for="cf-phone-cc">Country Code</label>
+                <select id="cf-phone-cc" name="phone_cc" class="ii-phone-cc">
+                  <option value="+1"   data-fmt="(###) ### ####" selected>+1 — US</option>
+                  <option value="+1"   data-fmt="(###) ### ####"        >+1 — CA</option>
+                  <option value="+44"  data-fmt="#### ######"           >+44 — UK</option>
+                  <option value="+91"  data-fmt="##### #####"           >+91 — India</option>
+                  <option value="+61"  data-fmt="#### ### ###"          >+61 — AU</option>
+                  <option value="+49"  data-fmt="### #######"           >+49 — DE</option>
+                  <option value="+33"  data-fmt="## ## ## ## ##"        >+33 — FR</option>
+                  <option value="+971" data-fmt="## ### ####"           >+971 — UAE</option>
+                  <option value="+65"  data-fmt="#### ####"             >+65 — SG</option>
+                </select>
+              </div>
+              <div class="ii-form-group">
+                <label for="cf-phone">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="cf-phone" name="phone" required maxlength="20"
+                       autocomplete="tel" placeholder="(555) 000 0000" inputmode="numeric" />
+              </div>
+              <div class="ii-form-group">
+                <label for="cf-company">Company</label>
+                <input type="text" id="cf-company" name="company" maxlength="128"
+                       autocomplete="organization" placeholder="Your Organisation" />
+              </div>
+            </div>
+
+            <!-- Row 3: Website · City · Country -->
+            <div class="ii-form-row ii-form-row--3">
+              <div class="ii-form-group">
+                <label for="cf-website">Website</label>
+                <div class="ii-url-wrap">
+                  <span class="ii-url-prefix">https://</span>
+                  <input type="text" id="cf-website" name="website" maxlength="200"
+                         autocomplete="url" placeholder="www.yourcompany.com"
+                         class="ii-url-input" inputmode="url" />
+                </div>
+              </div>
+              <div class="ii-form-group">
+                <label for="cf-city">City</label>
+                <input type="text" id="cf-city" name="city" maxlength="128" autocomplete="address-level2" placeholder="Sacramento" />
+              </div>
+              <div class="ii-form-group">
+                <label for="cf-country">Country</label>
+                <input type="text" id="cf-country" name="country" maxlength="128" autocomplete="country-name" placeholder="USA" />
+              </div>
+            </div>
+
+            <!-- Row 4: Subject (full width) -->
+            <div class="ii-form-row ii-form-row--1">
+              <div class="ii-form-group">
+                <label for="cf-subject">Subject <span class="req">*</span></label>
+                <input type="text" id="cf-subject" name="subject" required maxlength="128" placeholder="e.g. Custom software development enquiry" />
+              </div>
+            </div>
+
+            <!-- Row 5: Message (full width) -->
+            <div class="ii-form-row ii-form-row--1">
+              <div class="ii-form-group">
+                <label for="cf-comment">Message</label>
+                <textarea id="cf-comment" name="message" rows="4" placeholder="Brief description of your project, timeline, or questions…"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="ii-form-footer">
+              <button type="submit" class="ii-submit-btn" id="ii-submit-btn">Send Message</button>
+              <span class="ii-form-note"><span class="req">*</span> Required fields. We typically respond within one business day.</span>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- ══ Right: Contact info ══════════════════════════════════════ -->
+      <div>
+        <div class="ii-contact-info">
+          <div class="ii-contact-info__head">Direct Contact</div>
+
+          <div class="ii-contact-block">
+            <div class="ii-contact-block__label">Company</div>
+            <div class="ii-contact-row">
+              <span>Intelli Infotech Inc.</span>
+            </div>
+            <div class="ii-contact-row">
+              <a href="http://www.intelliinfo.us">www.intelliinfo.us</a>
+            </div>
+          </div>
+
+          <div class="ii-contact-block">
+            <div class="ii-contact-block__label">US Office</div>
+            <div class="ii-contact-row">
+              <span class="ii-lbl">Addr</span>
+              <span>Sacramento, CA 95835</span>
+            </div>
+            <div class="ii-contact-row">
+              <span class="ii-lbl">Phone</span>
+              <span><a href="tel:+19253599490">925 359 9490</a></span>
+            </div>
+            <div class="ii-contact-row">
+              <span class="ii-lbl">Fax</span>
+              <span>925 807 0347</span>
+            </div>
+          </div>
+
+          <div class="ii-contact-block">
+            <div class="ii-contact-block__label">Delivery Centre</div>
+            <div class="ii-contact-row">
+              <span>India</span>
+            </div>
+          </div>
+
+          <div class="ii-contact-block">
+            <div class="ii-contact-block__label">Business Hours</div>
+            <div class="ii-contact-row">
+              <span class="ii-lbl">Mon–Fri</span>
+              <span>9 AM – 6 PM PST</span>
+            </div>
+            <div class="ii-contact-row">
+              <span class="ii-lbl">Response</span>
+              <span>Within 1 business day</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+  (function () {
+
+    /* ══════════════════════════════════════════
+       PHONE — auto-format on blur
+    ══════════════════════════════════════════ */
+    var ccSel   = document.getElementById('cf-phone-cc');
+    var phoneIn = document.getElementById('cf-phone');
+
+    function getFormat() {
+      var opt = ccSel.options[ccSel.selectedIndex];
+      return (opt && opt.dataset.fmt) ? opt.dataset.fmt : '(###) ### ####';
+    }
+
+    function applyFormat(digits, fmt) {
+      var out = '';
+      var di  = 0;
+      for (var i = 0; i < fmt.length && di < digits.length; i++) {
+        out += (fmt[i] === '#') ? digits[di++] : fmt[i];
+      }
+      return out;
+    }
+
+    // On blur: strip non-digits, apply country format
+    phoneIn.addEventListener('blur', function () {
+      var digits = phoneIn.value.replace(/\D/g, '');
+      if (!digits) return;
+      phoneIn.value = applyFormat(digits, getFormat());
+    });
+
+    // When country changes, re-format whatever is already in the field
+    ccSel.addEventListener('change', function () {
+      var digits = phoneIn.value.replace(/\D/g, '');
+      if (digits) phoneIn.value = applyFormat(digits, getFormat());
+      // Update placeholder to show the new country's pattern
+      phoneIn.placeholder = getFormat().replace(/#/g, '0');
+    });
+
+    // Set initial placeholder
+    phoneIn.placeholder = getFormat().replace(/#/g, '0');
+
+    /* ══════════════════════════════════════════
+       WEBSITE — enforce https:// prefix in hidden field
+       The visible input only shows the part AFTER https://
+       On submit we combine them into the real name=website value.
+    ══════════════════════════════════════════ */
+    var urlInput = document.getElementById('cf-website');
+
+    // Strip any protocol the user pastes in
+    urlInput.addEventListener('input', function () {
+      var v = urlInput.value;
+      // Remove any leading protocol the user typed
+      v = v.replace(/^(https?:\/\/|http:\/\/|\/\/)/i, '');
+      // Remove any https:// they pasted mid-value
+      v = v.replace(/https?:\/\//gi, '');
+      urlInput.value = v;
+    });
+
+    urlInput.addEventListener('paste', function () {
+      // Let paste land then clean it up
+      setTimeout(function () {
+        var v = urlInput.value.replace(/^(https?:\/\/|http:\/\/|\/\/)/i, '').replace(/https?:\/\//gi, '');
+        urlInput.value = v;
+      }, 0);
+    });
+
+    /* ══════════════════════════════════════════
+       FORM SUBMIT
+    ══════════════════════════════════════════ */
+    var form   = document.getElementById('ii-contact-form');
+    var btn    = document.getElementById('ii-submit-btn');
+    var thanks = document.getElementById('ii-thankyou');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Required field validation
+      var ok = true;
+      form.querySelectorAll('[required]').forEach(function (f) {
+        if (!f.value.trim()) { f.style.borderColor = '#cc0040'; ok = false; }
+        else                 { f.style.borderColor = ''; }
+      });
+      if (!ok) return;
+
+      // Phone: trigger blur-format first (in case user never tabbed away),
+      // then combine country code + number into the phone field for submission.
+      // Strip any country code the user may have typed in manually first.
+      var digits = phoneIn.value.replace(/\D/g, '');
+      var formatted = applyFormat(digits, getFormat());
+      phoneIn.value = ccSel.value + ' ' + formatted;
+
+      // Website: strip any existing protocol the user typed, then prepend https://
+      var urlVal = urlInput.value.trim()
+                    .replace(/^(https?:\/\/|\/\/)/i, '');  // remove any typed protocol
+      if (urlVal) {
+        var looksValid = /^[^\s]+\.[^\s]+/.test(urlVal);
+        urlInput.value = looksValid ? 'https://' + urlVal : urlVal;
+      }
+
+      // Build the full URL: prepend https:// if there is content and it looks like a valid host
+      var urlVal = urlInput.value.trim();
+      if (urlVal) {
+        // Basic validity: must contain at least one dot and no spaces
+        var looksValid = /^[^\s]+\.[^\s]+/.test(urlVal);
+        urlInput.value = looksValid ? 'https://' + urlVal : urlVal;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (r) {
+        if (r.ok) {
+          form.style.display = 'none';
+          thanks.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          alert('Something went wrong. Please try again or call us directly.');
+        }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        alert('Network error. Please check your connection and try again.');
+      });
+    });
+
+  })();
+  </script>
+
+</body>
+</html>

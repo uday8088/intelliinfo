@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Vehicles — Intelli Infotech Inc.</title>
+  <meta name="description" content="Contract vehicle options, engagement models, and procurement pathways for working with Intelli Infotech Inc." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--font:'Aptos','Outfit','Segoe UI',ui-sans-serif,system-ui,sans-serif;}</style>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .ii-hero{background:linear-gradient(135deg,#fff 60%,#fff0f5 100%);border-left:4px solid var(--accent);padding:28px 28px 24px 24px;margin-bottom:36px;border-radius:0 4px 4px 0;}
+    .ii-hero__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .ii-hero__headline{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+    .ii-hero__headline em{color:var(--accent);font-style:normal;}
+    .ii-hero__body{font-size:15px;line-height:1.75;color:var(--text-soft);max-width:820px;margin:0 0 18px;}
+    .ii-hero__stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap;}
+    .ii-hero__stat strong{display:block;font-size:22px;font-weight:700;color:var(--accent);line-height:1;}
+    .ii-hero__stat span{font-size:12px;color:var(--text-soft);letter-spacing:.03em;}
+    .ii-sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .ii-sec-title{font-size:19px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .viz-panel{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 6px 6px;padding:22px 22px 18px;margin-bottom:22px;}
+    .viz-panel__title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+    .viz-panel__sub{font-size:12px;color:var(--text-soft);margin-bottom:18px;}
+    .viz-row-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+    .viz-row-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:28px;}
+    @media(max-width:820px){.viz-row-2{grid-template-columns:1fr;}}
+    @media(max-width:700px){.viz-row-3{grid-template-columns:1fr;}}
+
+    /* ── Contract type cards ── */
+    .ct-card{border:1px solid var(--border);border-radius:8px;padding:20px 18px;background:#fff;border-top:3px solid;}
+    .ct-card__badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;}
+    .ct-card__title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px;}
+    .ct-card__desc{font-size:13px;color:var(--text-soft);line-height:1.6;margin-bottom:12px;}
+    .ct-card__pros{display:flex;flex-direction:column;gap:4px;}
+    .ct-card__pro{font-size:12px;color:var(--text-soft);display:flex;gap:6px;}
+    .ct-card__pro::before{content:'✓';color:#22c55e;font-weight:700;flex-shrink:0;}
+
+    /* ── Process flow ── */
+    .proc-steps{display:flex;flex-direction:column;gap:0;padding-left:28px;position:relative;}
+    .proc-steps::before{content:'';position:absolute;left:10px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,var(--accent),#c7d2fe);}
+    .proc-step{position:relative;padding:0 0 18px 20px;}
+    .proc-step:last-child{padding-bottom:0;}
+    .proc-dot{position:absolute;left:-18px;top:3px;width:16px;height:16px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;}
+    .proc-period{font-size:10.5px;font-weight:700;color:var(--accent);margin-bottom:2px;}
+    .proc-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+    .proc-desc{font-size:12px;color:var(--text-soft);line-height:1.5;}
+
+    /* ── Comparison table ── */
+    .comp-table{width:100%;border-collapse:collapse;}
+    .comp-table thead th{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-soft);padding:8px 12px;border-bottom:2px solid var(--border);text-align:left;background:#fafafa;}
+    .comp-table tbody tr{border-bottom:1px solid #f1f5f9;}
+    .comp-table tbody tr:last-child{border-bottom:none;}
+    .comp-table tbody tr:hover{background:#fafafa;}
+    .comp-table td{padding:9px 12px;font-size:12.5px;color:var(--text-soft);vertical-align:middle;}
+    .comp-table td:first-child{font-weight:600;color:var(--text);}
+    .check{color:#22c55e;font-weight:700;}
+    .partial{color:#eab308;font-weight:700;}
+    .cross{color:#ef4444;font-weight:700;}
+
+    /* ── CTA ── */
+    .cta-bar{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#fff0f5,#fff);border:1px solid #fecdd3;border-radius:8px;padding:18px 22px;gap:16px;flex-wrap:wrap;margin-bottom:22px;}
+    .cta-bar__text strong{display:block;font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;}
+    .cta-bar__text span{font-size:13px;color:var(--text-soft);}
+    .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:4px;text-decoration:none;transition:opacity .2s;}
+    .cta-btn:hover{opacity:.88;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Capabilities — Contract Vehicles &amp; Engagement Models</div>
+      <h1 class="ii-hero__headline">Flexible to Procure.<br/><em>Simple</em> to Engage. <em>Built</em> to Deliver.</h1>
+      <p class="ii-hero__body">We support multiple contract types and procurement pathways — from direct commercial agreements to government task orders. Whether you need a quick-start staff augmentation or a structured program delivery engagement, we can accommodate your acquisition requirements.</p>
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat"><strong>T&amp;M</strong><span>Time &amp; Materials</span></div>
+        <div class="ii-hero__stat"><strong>FFP</strong><span>Firm Fixed Price</span></div>
+        <div class="ii-hero__stat"><strong>Direct</strong><span>Commercial Contracts</span></div>
+        <div class="ii-hero__stat"><strong>Sub</strong><span>Subcontracting Available</span></div>
+      </div>
+    </div>
+
+    <!-- Contract type cards -->
+    <div class="ii-sec-label">Engagement Models</div>
+    <h2 class="ii-sec-title">Available Contract Types</h2>
+    <div class="viz-row-3">
+      <div class="ct-card" style="border-top-color:#e5005f;">
+        <span class="ct-card__badge" style="background:#fff0f5;color:#e5005f;">T&amp;M</span>
+        <div class="ct-card__title">Time &amp; Materials</div>
+        <div class="ct-card__desc">Best for evolving scope or staff augmentation. Billed on actual hours and materials at agreed rates.</div>
+        <div class="ct-card__pros">
+          <div class="ct-card__pro">Maximum flexibility for changing requirements</div>
+          <div class="ct-card__pro">Transparent hourly rate schedule</div>
+          <div class="ct-card__pro">Monthly invoicing with detailed timesheets</div>
+          <div class="ct-card__pro">Ideal for long-term staff augmentation</div>
+        </div>
+      </div>
+      <div class="ct-card" style="border-top-color:#3b82f6;">
+        <span class="ct-card__badge" style="background:#eff6ff;color:#3b82f6;">FFP</span>
+        <div class="ct-card__title">Firm Fixed Price</div>
+        <div class="ct-card__desc">Best for well-defined deliverables. Fixed price for a defined scope — predictable cost, clear accountability.</div>
+        <div class="ct-card__pros">
+          <div class="ct-card__pro">Budget certainty from day one</div>
+          <div class="ct-card__pro">Milestone-based payment schedule</div>
+          <div class="ct-card__pro">Defined deliverables and acceptance criteria</div>
+          <div class="ct-card__pro">Ideal for audits, assessments, and projects</div>
+        </div>
+      </div>
+      <div class="ct-card" style="border-top-color:#a855f7;">
+        <span class="ct-card__badge" style="background:#faf5ff;color:#a855f7;">Retainer</span>
+        <div class="ct-card__title">Monthly Retainer</div>
+        <div class="ct-card__desc">Best for ongoing advisory, fractional PMO, or continuous accessibility monitoring. Predictable monthly commitment.</div>
+        <div class="ct-card__pros">
+          <div class="ct-card__pro">Reserved capacity each month</div>
+          <div class="ct-card__pro">Ongoing advisory and escalation support</div>
+          <div class="ct-card__pro">Discounted effective rate vs. T&amp;M</div>
+          <div class="ct-card__pro">Ideal for fractional leadership roles</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viz-row-2">
+      <!-- Procurement pathways -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Procurement Pathways</div>
+        <div class="viz-panel__sub">How to engage Intelli Infotech for your programme</div>
+        <div class="proc-steps">
+          <div class="proc-step">
+            <div class="proc-dot" style="background:#e5005f;">1</div>
+            <div class="proc-period">Direct Commercial</div>
+            <div class="proc-title">Commercial Contract</div>
+            <div class="proc-desc">Fastest path. SOW, MSA, or PO-based. No government procurement process required for commercial clients.</div>
+          </div>
+          <div class="proc-step">
+            <div class="proc-dot" style="background:#3b82f6;">2</div>
+            <div class="proc-period">Prime Subcontract</div>
+            <div class="proc-title">Subcontractor to a Prime</div>
+            <div class="proc-desc">We team with larger primes as a subcontractor — particularly for SB subcontracting plan requirements.</div>
+          </div>
+          <div class="proc-step">
+            <div class="proc-dot" style="background:#a855f7;">3</div>
+            <div class="proc-period">Sole Source / Micro-Purchase</div>
+            <div class="proc-title">Simplified Acquisition</div>
+            <div class="proc-desc">Eligible for sole source awards and micro-purchase thresholds under FAR Part 13 for qualified work.</div>
+          </div>
+          <div class="proc-step">
+            <div class="proc-dot" style="background:#22c55e;">4</div>
+            <div class="proc-period">Competitive Bid (RFQ / RFP)</div>
+            <div class="proc-title">Open Competition</div>
+            <div class="proc-desc">We respond to formal solicitations including SAM.gov posted RFQs and agency-specific RFPs.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Contract Type Comparison</div>
+        <div class="viz-panel__sub">Choosing the right vehicle for your needs</div>
+        <table class="comp-table">
+          <thead>
+            <tr><th>Criteria</th><th>T&amp;M</th><th>FFP</th><th>Retainer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Budget Certainty</td><td class="partial">⬤ Moderate</td><td class="check">✓ High</td><td class="check">✓ High</td></tr>
+            <tr><td>Scope Flexibility</td><td class="check">✓ High</td><td class="partial">⬤ Low</td><td class="partial">⬤ Moderate</td></tr>
+            <tr><td>Staff Aug Use</td><td class="check">✓ Ideal</td><td class="cross">✗ Not typical</td><td class="partial">⬤ Possible</td></tr>
+            <tr><td>Project Delivery</td><td class="partial">⬤ Possible</td><td class="check">✓ Ideal</td><td class="cross">✗ Not typical</td></tr>
+            <tr><td>Advisory / Fractional</td><td class="partial">⬤ Possible</td><td class="partial">⬤ Possible</td><td class="check">✓ Ideal</td></tr>
+            <tr><td>Gov Compliance</td><td class="check">✓ FAR compliant</td><td class="check">✓ FAR compliant</td><td class="check">✓ Commercial</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-bar">
+      <div class="cta-bar__text">
+        <strong>Ready to Engage?</strong>
+        <span>Contact us to discuss the right vehicle for your programme — we'll match the contract type to your timeline and acquisition requirements.</span>
+      </div>
+      <a href="contactus.html" class="cta-btn">→ Get in Touch</a>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+</body>
+</html>

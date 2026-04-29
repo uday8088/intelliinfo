@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAICS Codes — Intelli Infotech Inc.</title>
+  <meta name="description" content="NAICS codes, PSC codes, and SIC codes for Intelli Infotech Inc. — government contracting reference." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--font:'Aptos','Outfit','Segoe UI',ui-sans-serif,system-ui,sans-serif;}</style>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .ii-hero{background:linear-gradient(135deg,#fff 60%,#fff0f5 100%);border-left:4px solid var(--accent);padding:28px 28px 24px 24px;margin-bottom:36px;border-radius:0 4px 4px 0;}
+    .ii-hero__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .ii-hero__headline{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+    .ii-hero__headline em{color:var(--accent);font-style:normal;}
+    .ii-hero__body{font-size:15px;line-height:1.75;color:var(--text-soft);max-width:820px;margin:0 0 18px;}
+    .ii-hero__stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap;}
+    .ii-hero__stat strong{display:block;font-size:22px;font-weight:700;color:var(--accent);line-height:1;}
+    .ii-hero__stat span{font-size:12px;color:var(--text-soft);letter-spacing:.03em;}
+    .ii-sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .ii-sec-title{font-size:19px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .viz-panel{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 6px 6px;padding:22px 22px 18px;margin-bottom:22px;}
+    .viz-panel__title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+    .viz-panel__sub{font-size:12px;color:var(--text-soft);margin-bottom:18px;}
+    .viz-row-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+    @media(max-width:820px){.viz-row-2{grid-template-columns:1fr;}}
+
+    /* ── NAICS table ── */
+    .naics-table{width:100%;border-collapse:collapse;}
+    .naics-table thead th{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-soft);padding:8px 12px;border-bottom:2px solid var(--border);text-align:left;background:#fafafa;}
+    .naics-table tbody tr{border-bottom:1px solid #f1f5f9;transition:background .15s;}
+    .naics-table tbody tr:hover{background:#fff0f5;}
+    .naics-table tbody tr:last-child{border-bottom:none;}
+    .naics-table td{padding:10px 12px;font-size:13px;color:var(--text-soft);vertical-align:top;line-height:1.45;}
+    .naics-table td:first-child{font-family:monospace;font-size:13.5px;font-weight:700;color:var(--accent);white-space:nowrap;}
+    .naics-table td:nth-child(2){color:var(--text);font-weight:600;}
+    .primary-badge{display:inline-block;font-size:9.5px;font-weight:700;background:#fff0f5;color:var(--accent);border-radius:20px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
+
+    /* ── PSC codes ── */
+    .psc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+    .psc-card{border:1px solid var(--border);border-radius:6px;padding:14px 14px;display:flex;gap:12px;align-items:flex-start;}
+    .psc-code{font-family:monospace;font-size:15px;font-weight:700;color:var(--accent);flex-shrink:0;background:#fff0f5;border-radius:4px;padding:4px 8px;}
+    .psc-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+    .psc-desc{font-size:12px;color:var(--text-soft);line-height:1.45;}
+    @media(max-width:600px){.psc-grid{grid-template-columns:1fr;}}
+
+    /* ── SAM.gov callout ── */
+    .sam-bar{display:flex;align-items:center;gap:14px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:14px 18px;margin-bottom:22px;flex-wrap:wrap;}
+    .sam-bar__icon{font-size:24px;flex-shrink:0;}
+    .sam-bar__text strong{display:block;font-size:13.5px;font-weight:700;color:#166534;margin-bottom:2px;}
+    .sam-bar__text span{font-size:12.5px;color:#15803d;}
+
+    /* ── Size standards bar ── */
+    .size-std{display:flex;flex-direction:column;gap:10px;}
+    .size-row{display:flex;align-items:center;gap:10px;}
+    .size-code{font-family:monospace;font-size:12px;font-weight:700;color:var(--accent);width:70px;flex-shrink:0;}
+    .size-track{flex:1;height:16px;background:#f1f5f9;border-radius:8px;overflow:hidden;position:relative;}
+    .size-fill{height:100%;border-radius:8px;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:700;color:#fff;}
+    .size-lbl{font-size:11px;color:var(--text-soft);width:160px;flex-shrink:0;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Capabilities — NAICS Codes &amp; Classification</div>
+      <h1 class="ii-hero__headline">Procurement-Ready.<br/><em>Properly Classified.</em> SAM Registered.</h1>
+      <p class="ii-hero__body">Use the codes below to locate Intelli Infotech Inc. in SAM.gov, issue RFQs, or validate our eligibility for set-aside opportunities. Our primary NAICS codes reflect our core practice in IT consulting, program management, and digital transformation.</p>
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat"><strong>SB</strong><span>Small Business</span></div>
+        <div class="ii-hero__stat"><strong>SAM.gov</strong><span>Active Registration</span></div>
+        <div class="ii-hero__stat"><strong>Est. 2003</strong><span>20+ Years</span></div>
+        <div class="ii-hero__stat"><strong>US-Based</strong><span>Principal Delivery</span></div>
+      </div>
+    </div>
+
+    <!-- SAM.gov status -->
+    <div class="sam-bar">
+      <div class="sam-bar__icon">✅</div>
+      <div class="sam-bar__text">
+        <strong>SAM.gov Registration — Active</strong>
+        <span>Intelli Infotech Inc. is actively registered in the System for Award Management (SAM.gov). UEI and CAGE code available upon request.</span>
+      </div>
+    </div>
+
+    <!-- Primary NAICS table -->
+    <div class="ii-sec-label">North American Industry Classification System</div>
+    <h2 class="ii-sec-title">Primary NAICS Codes</h2>
+    <div class="viz-panel" style="margin-bottom:22px;">
+      <div class="viz-panel__title">NAICS Code Reference Table</div>
+      <div class="viz-panel__sub">Codes under which Intelli Infotech is registered and eligible to compete</div>
+      <table class="naics-table">
+        <thead>
+          <tr><th>Code</th><th>Title</th><th>Description / Relevance</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>541511 <span class="primary-badge">Primary</span></td>
+            <td>Custom Computer Programming Services</td>
+            <td>Software development, AI/ML engineering, application modernisation, and full-stack custom builds</td>
+          </tr>
+          <tr>
+            <td>541512</td>
+            <td>Computer Systems Design Services</td>
+            <td>Architecture design, cloud platform design, data systems, and infrastructure consulting</td>
+          </tr>
+          <tr>
+            <td>541519</td>
+            <td>Other Computer Related Services</td>
+            <td>IT program management, digital strategy advisory, and technology consulting</td>
+          </tr>
+          <tr>
+            <td>541611</td>
+            <td>Management Consulting Services</td>
+            <td>Digital transformation strategy, operating model redesign, and change management</td>
+          </tr>
+          <tr>
+            <td>541690</td>
+            <td>Other Scientific &amp; Technical Consulting</td>
+            <td>Accessibility (ADA/WCAG/§508) consulting and compliance advisory services</td>
+          </tr>
+          <tr>
+            <td>561320</td>
+            <td>Temporary Help Services</td>
+            <td>Staff augmentation and on-demand placement of technical and consulting professionals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="viz-row-2">
+      <!-- PSC codes -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Product &amp; Service Codes (PSC)</div>
+        <div class="viz-panel__sub">Federal procurement service classification codes</div>
+        <div class="psc-grid">
+          <div class="psc-card">
+            <div class="psc-code">D302</div>
+            <div><div class="psc-title">IT Systems Development</div><div class="psc-desc">Application development and software engineering services</div></div>
+          </div>
+          <div class="psc-card">
+            <div class="psc-code">D307</div>
+            <div><div class="psc-title">IT Program Management</div><div class="psc-desc">PMO, governance, and delivery management support</div></div>
+          </div>
+          <div class="psc-card">
+            <div class="psc-code">D316</div>
+            <div><div class="psc-title">IT Systems Analysis</div><div class="psc-desc">Architecture review, modernisation assessment, roadmapping</div></div>
+          </div>
+          <div class="psc-card">
+            <div class="psc-code">R425</div>
+            <div><div class="psc-title">Engineering &amp; Tech Mgmt Support</div><div class="psc-desc">Technical consulting, staff augmentation, and advisory</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Size standards visual -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Small Business Size Standards</div>
+        <div class="viz-panel__sub">SBA thresholds — Intelli Infotech qualifies as Small Business across all primary codes</div>
+        <div class="size-std" id="sizeStd"></div>
+        <div style="margin-top:16px;padding:12px;background:#f0fdf4;border-radius:6px;border:1px solid #bbf7d0;">
+          <div style="font-size:12px;font-weight:700;color:#166534;margin-bottom:3px;">✓ Qualifies as Small Business</div>
+          <div style="font-size:11.5px;color:#15803d;line-height:1.5;">Intelli Infotech is well within SBA size thresholds for all listed NAICS codes, making it eligible for small business set-aside opportunities.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script>
+    (function(){
+      const items=[
+        {code:'541511',threshold:'$34M annual revenue',fill:15,color:'#e5005f',label:'Custom Programming'},
+        {code:'541512',threshold:'$34M annual revenue',fill:15,color:'#3b82f6',label:'Systems Design'},
+        {code:'541611',threshold:'$24.5M annual revenue',fill:15,color:'#a855f7',label:'Mgmt Consulting'},
+        {code:'561320',threshold:'$41.5M annual revenue',fill:12,color:'#22c55e',label:'Temp Help / Staff Aug'},
+      ];
+      const wrap=document.getElementById('sizeStd');
+      items.forEach(it=>{
+        wrap.innerHTML+=`
+          <div class="size-row">
+            <div class="size-code">${it.code}</div>
+            <div class="size-track"><div class="size-fill" style="width:${it.fill}%;background:${it.color};">${it.fill}%</div></div>
+            <div class="size-lbl">of ${it.threshold}</div>
+          </div>`;
+      });
+    })();
+  </script>
+</body>
+</html>

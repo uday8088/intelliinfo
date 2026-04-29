@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clients – Intelli Infotech Inc.</title>
+  <meta name="description" content="Trusted by leading global enterprises — Intelli Infotech Inc. client portfolio." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    .ii-clients-intro {
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text-soft);
+      margin-bottom: 28px;
+    }
+
+    .ii-logo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .ii-logo-cell {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      transition: border-color .15s, box-shadow .15s;
+      min-height: 90px;
+    }
+
+    .ii-logo-cell:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 10px rgba(229, 0, 95, .10);
+    }
+
+    .ii-logo-cell img {
+      max-width: 130px;
+      max-height: 56px;
+      object-fit: contain;
+      filter: grayscale(40%);
+      transition: filter .2s;
+    }
+
+    .ii-logo-cell:hover img {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+      .ii-logo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 420px) {
+      .ii-logo-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar injected by navbar-loader.js -->
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <h1 class="ii-section-heading">Our Clients</h1>
+
+    <p class="ii-clients-intro">
+      Since 2003, Intelli Infotech has been trusted by enterprises across the United States,
+      Europe, and beyond. Our client portfolio spans finance, healthcare, technology, retail,
+      automotive, hospitality, and public-sector organisations.
+    </p>
+
+    <div class="ii-logo-grid">
+
+      <div class="ii-logo-cell">
+        <img src="clients/Cognizant_Logo.jpg" alt="Cognizant" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/ConAgra_Logo.jpg" alt="ConAgra" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/DMVCal_Logo.jpg" alt="California DMV" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Ford_Logo.jpg" alt="Ford" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/Gilead_Logo.jpg" alt="Gilead Sciences" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Glaxo_Logo.jpg" alt="GlaxoSmithKline" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/HarwardUniv_Logo.jpg" alt="Harvard University" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/HCL_Logo.jpg" alt="HCL Technologies" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/Honda_Logo.jpg" alt="Honda" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Hyatt_Logo.jpg" alt="Hyatt" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Intel_Logo.jpg" alt="Intel" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/JohnsonControls_Logo.jpg" alt="Johnson Controls" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/KingCounty_Logo.jpg" alt="King County" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/AIG_Logo.jpg" alt="AIG" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/AmericanAir_Logo.jpg" alt="American Airlines" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Cisco_Logo.jpg" alt="Cisco" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/K2_Logo.jpg" alt="K2" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Verizon_Logo.jpg" alt="Verizon" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Siemens_Logo.jpg" alt="Siemens" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Macys_Logo.jpg" alt="Macy's" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/Mckesson_Logo.jpg" alt="McKesson" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/TCS_Logo.jpg" alt="Tata Consultancy Services" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Wells_Logo.jpg" alt="Wells Fargo" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Accenture_Logo.jpg" alt="Accenture" />
+      </div>
+
+      <div class="ii-logo-cell">
+        <img src="clients/KPMG_Logo.jpg" alt="KPMG" />
+      </div>
+      <div class="ii-logo-cell">
+        <img src="clients/Motorola_Logo.jpg" alt="Motorola" />
+      </div>
+      <!-- Two empty cells to complete the last row -->
+      <div class="ii-logo-cell" style="border-color: transparent; background: transparent;"></div>
+      <div class="ii-logo-cell" style="border-color: transparent; background: transparent;"></div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer injected by footer-loader.js -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

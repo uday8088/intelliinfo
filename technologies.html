@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technologies – Intelli Infotech Inc.</title>
+  <meta name="description" content="Modern technology stack at Intelli Infotech — AI agents, LLMs, cloud platforms, languages, DevOps, databases, and more." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    .ii-hero {
+      background: linear-gradient(135deg, #fff 60%, #fff0f5 100%);
+      border-left: 4px solid var(--accent);
+      padding: 28px 28px 24px 24px;
+      margin-bottom: 36px;
+      border-radius: 0 4px 4px 0;
+    }
+    .ii-hero__label {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    }
+    .ii-hero__headline {
+      font-size: 26px; font-weight: 700; color: var(--text);
+      line-height: 1.25; margin-bottom: 14px; letter-spacing: -.3px;
+    }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body {
+      font-size: 15px; line-height: 1.75; color: var(--text-soft); max-width: 820px;
+    }
+
+    .ii-cards-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+    }
+    .ii-cards-title {
+      font-size: 19px; font-weight: 700; color: var(--text);
+      margin-bottom: 20px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Tech card grid ── */
+    .ii-tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .ii-tech-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 18px 18px 16px;
+      border-radius: 0 0 4px 4px;
+      transition: transform .22s ease, box-shadow .22s ease, border-top-color .22s ease;
+      cursor: default;
+    }
+    .ii-tech-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(229, 0, 95, .10), 0 2px 8px rgba(0,0,0,.07);
+      border-top-color: var(--accent-dark);
+    }
+    .ii-tech-card__icon {
+      font-size: 22px; margin-bottom: 10px; line-height: 1;
+    }
+    .ii-tech-card__title {
+      font-size: 13px; font-weight: 700; color: var(--text);
+      text-transform: uppercase; letter-spacing: .05em;
+      margin-bottom: 10px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ii-tech-card__tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0;
+    }
+    .ii-tech-tag {
+      display: inline-block;
+      background: var(--stripe);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      padding: 3px 9px;
+      font-size: 12.5px; font-weight: 500; color: var(--text);
+      border-radius: 0 2px 2px 0;
+      white-space: nowrap;
+    }
+
+    /* AI section gets a distinct accent */
+    .ii-tech-card--ai {
+      border-top-color: var(--accent);
+      background: linear-gradient(160deg, #fff 70%, #fff0f5 100%);
+    }
+    .ii-tech-card--ai .ii-tech-tag {
+      background: #fff0f5;
+      border-left-color: var(--accent-dark);
+    }
+
+    @media (max-width: 900px) {
+      .ii-tech-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .ii-tech-grid { grid-template-columns: 1fr; }
+      .ii-hero__headline { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <!-- ══ Hero ═══════════════════════════════════════════════════════ -->
+    <div class="ii-hero">
+      <div class="ii-hero__label">Full Technology Stack</div>
+      <h1 class="ii-hero__headline">
+        Modern Tools for <em>Intelligent Software</em>
+      </h1>
+      <p class="ii-hero__body">
+        Our engineers work across a broad, current technology stack — from cloud-native
+        infrastructure and AI agent frameworks to DevOps pipelines and enterprise databases.
+        Every tool is chosen for production readiness, community support, and long-term
+        maintainability.
+      </p>
+    </div>
+
+    <!-- ══ AI & Agents ════════════════════════════════════════════════ -->
+    <div class="ii-cards-label">Artificial Intelligence</div>
+    <h2 class="ii-cards-title">AI, LLMs &amp; Agent Frameworks</h2>
+
+    <div class="ii-tech-grid">
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">🤖</div>
+        <div class="ii-tech-card__title">Large Language Models</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">OpenAI GPT-4o</span>
+          <span class="ii-tech-tag">Anthropic Claude</span>
+          <span class="ii-tech-tag">Google Gemini</span>
+          <span class="ii-tech-tag">Meta Llama 3</span>
+          <span class="ii-tech-tag">Mistral</span>
+          <span class="ii-tech-tag">Azure OpenAI Service</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">🧠</div>
+        <div class="ii-tech-card__title">AI Agent Frameworks</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">LangChain</span>
+          <span class="ii-tech-tag">LangGraph</span>
+          <span class="ii-tech-tag">LlamaIndex</span>
+          <span class="ii-tech-tag">AutoGen</span>
+          <span class="ii-tech-tag">CrewAI</span>
+          <span class="ii-tech-tag">Semantic Kernel</span>
+          <span class="ii-tech-tag">Haystack</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">🔍</div>
+        <div class="ii-tech-card__title">RAG &amp; Vector Databases</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Pinecone</span>
+          <span class="ii-tech-tag">Weaviate</span>
+          <span class="ii-tech-tag">pgvector</span>
+          <span class="ii-tech-tag">ChromaDB</span>
+          <span class="ii-tech-tag">Qdrant</span>
+          <span class="ii-tech-tag">Azure AI Search</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">⚙️</div>
+        <div class="ii-tech-card__title">Machine Learning &amp; MLOps</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">PyTorch</span>
+          <span class="ii-tech-tag">TensorFlow</span>
+          <span class="ii-tech-tag">scikit-learn</span>
+          <span class="ii-tech-tag">Azure ML</span>
+          <span class="ii-tech-tag">AWS SageMaker</span>
+          <span class="ii-tech-tag">MLflow</span>
+          <span class="ii-tech-tag">Hugging Face</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">🤝</div>
+        <div class="ii-tech-card__title">AI Copilot &amp; Productivity</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">GitHub Copilot</span>
+          <span class="ii-tech-tag">Microsoft Copilot 365</span>
+          <span class="ii-tech-tag">Cursor</span>
+          <span class="ii-tech-tag">Tabnine</span>
+          <span class="ii-tech-tag">Amazon CodeWhisperer</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card ii-tech-card--ai">
+        <div class="ii-tech-card__icon">🔗</div>
+        <div class="ii-tech-card__title">AI Orchestration &amp; Tools</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">OpenAI Assistants API</span>
+          <span class="ii-tech-tag">Function Calling</span>
+          <span class="ii-tech-tag">Tool Use / MCP</span>
+          <span class="ii-tech-tag">Prompt Flow</span>
+          <span class="ii-tech-tag">Weights &amp; Biases</span>
+          <span class="ii-tech-tag">LangSmith</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ Cloud & Infrastructure ════════════════════════════════════ -->
+    <div class="ii-cards-label">Infrastructure</div>
+    <h2 class="ii-cards-title">Cloud &amp; DevOps</h2>
+
+    <div class="ii-tech-grid">
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">☁️</div>
+        <div class="ii-tech-card__title">Cloud Platforms</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Microsoft Azure</span>
+          <span class="ii-tech-tag">AWS</span>
+          <span class="ii-tech-tag">Google Cloud</span>
+          <span class="ii-tech-tag">Vercel</span>
+          <span class="ii-tech-tag">Railway</span>
+          <span class="ii-tech-tag">Cloudflare Workers</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🐳</div>
+        <div class="ii-tech-card__title">Containers &amp; Orchestration</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Docker</span>
+          <span class="ii-tech-tag">Kubernetes</span>
+          <span class="ii-tech-tag">Azure Kubernetes Service</span>
+          <span class="ii-tech-tag">Helm</span>
+          <span class="ii-tech-tag">Terraform</span>
+          <span class="ii-tech-tag">Pulumi</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🔁</div>
+        <div class="ii-tech-card__title">CI/CD &amp; DevOps</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">GitHub Actions</span>
+          <span class="ii-tech-tag">Azure DevOps</span>
+          <span class="ii-tech-tag">GitLab CI</span>
+          <span class="ii-tech-tag">ArgoCD</span>
+          <span class="ii-tech-tag">Jenkins</span>
+          <span class="ii-tech-tag">Nx Monorepo</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">📊</div>
+        <div class="ii-tech-card__title">Observability &amp; Monitoring</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Datadog</span>
+          <span class="ii-tech-tag">OpenTelemetry</span>
+          <span class="ii-tech-tag">Grafana</span>
+          <span class="ii-tech-tag">Prometheus</span>
+          <span class="ii-tech-tag">Azure Monitor</span>
+          <span class="ii-tech-tag">Sentry</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🔐</div>
+        <div class="ii-tech-card__title">Security &amp; Identity</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Azure AD / Entra ID</span>
+          <span class="ii-tech-tag">OAuth 2.0 / OIDC</span>
+          <span class="ii-tech-tag">Auth0</span>
+          <span class="ii-tech-tag">HashiCorp Vault</span>
+          <span class="ii-tech-tag">OWASP ZAP</span>
+          <span class="ii-tech-tag">Snyk</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🗃️</div>
+        <div class="ii-tech-card__title">Source Control &amp; Planning</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Git / GitHub</span>
+          <span class="ii-tech-tag">Azure DevOps Boards</span>
+          <span class="ii-tech-tag">Jira</span>
+          <span class="ii-tech-tag">Linear</span>
+          <span class="ii-tech-tag">Confluence</span>
+          <span class="ii-tech-tag">Notion</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ Languages & Frameworks ════════════════════════════════════ -->
+    <div class="ii-cards-label">Engineering</div>
+    <h2 class="ii-cards-title">Languages, Frameworks &amp; Databases</h2>
+
+    <div class="ii-tech-grid">
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">💻</div>
+        <div class="ii-tech-card__title">Backend Languages</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Python 3.x</span>
+          <span class="ii-tech-tag">C# / .NET 8</span>
+          <span class="ii-tech-tag">Node.js</span>
+          <span class="ii-tech-tag">Go</span>
+          <span class="ii-tech-tag">Java 21</span>
+          <span class="ii-tech-tag">TypeScript</span>
+          <span class="ii-tech-tag">Rust</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🌐</div>
+        <div class="ii-tech-card__title">Frontend Frameworks</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">React 18</span>
+          <span class="ii-tech-tag">Next.js 14</span>
+          <span class="ii-tech-tag">Vue 3</span>
+          <span class="ii-tech-tag">Angular 17</span>
+          <span class="ii-tech-tag">Astro</span>
+          <span class="ii-tech-tag">Tailwind CSS</span>
+          <span class="ii-tech-tag">shadcn/ui</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">📱</div>
+        <div class="ii-tech-card__title">Mobile</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">React Native</span>
+          <span class="ii-tech-tag">Flutter</span>
+          <span class="ii-tech-tag">Expo</span>
+          <span class="ii-tech-tag">Swift / SwiftUI</span>
+          <span class="ii-tech-tag">Kotlin / Jetpack</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🛢️</div>
+        <div class="ii-tech-card__title">Databases</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">PostgreSQL</span>
+          <span class="ii-tech-tag">SQL Server 2022</span>
+          <span class="ii-tech-tag">MySQL 8</span>
+          <span class="ii-tech-tag">MongoDB</span>
+          <span class="ii-tech-tag">Redis</span>
+          <span class="ii-tech-tag">Cosmos DB</span>
+          <span class="ii-tech-tag">Supabase</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🔌</div>
+        <div class="ii-tech-card__title">APIs &amp; Messaging</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">REST</span>
+          <span class="ii-tech-tag">GraphQL</span>
+          <span class="ii-tech-tag">gRPC</span>
+          <span class="ii-tech-tag">Apache Kafka</span>
+          <span class="ii-tech-tag">RabbitMQ</span>
+          <span class="ii-tech-tag">Azure Service Bus</span>
+          <span class="ii-tech-tag">WebSockets</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🧪</div>
+        <div class="ii-tech-card__title">Testing &amp; QA</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Playwright</span>
+          <span class="ii-tech-tag">Cypress</span>
+          <span class="ii-tech-tag">Jest / Vitest</span>
+          <span class="ii-tech-tag">xUnit / NUnit</span>
+          <span class="ii-tech-tag">k6</span>
+          <span class="ii-tech-tag">Postman / Newman</span>
+          <span class="ii-tech-tag">Selenium</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">📈</div>
+        <div class="ii-tech-card__title">Data &amp; Analytics</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Apache Spark</span>
+          <span class="ii-tech-tag">dbt</span>
+          <span class="ii-tech-tag">Apache Airflow</span>
+          <span class="ii-tech-tag">Power BI</span>
+          <span class="ii-tech-tag">Azure Synapse</span>
+          <span class="ii-tech-tag">Snowflake</span>
+          <span class="ii-tech-tag">Pandas / Polars</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🎨</div>
+        <div class="ii-tech-card__title">Design &amp; Prototyping</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">Figma</span>
+          <span class="ii-tech-tag">Adobe XD</span>
+          <span class="ii-tech-tag">Storybook</span>
+          <span class="ii-tech-tag">Zeplin</span>
+          <span class="ii-tech-tag">Miro</span>
+        </div>
+      </div>
+
+      <div class="ii-tech-card">
+        <div class="ii-tech-card__icon">🏗️</div>
+        <div class="ii-tech-card__title">Architecture &amp; Modelling</div>
+        <div class="ii-tech-card__tags">
+          <span class="ii-tech-tag">C4 Model</span>
+          <span class="ii-tech-tag">draw.io</span>
+          <span class="ii-tech-tag">Lucidchart</span>
+          <span class="ii-tech-tag">OpenAPI / Swagger</span>
+          <span class="ii-tech-tag">AsyncAPI</span>
+          <span class="ii-tech-tag">Mermaid</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

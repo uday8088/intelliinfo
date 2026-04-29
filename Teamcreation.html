@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Creation Approach – Intelli Infotech Inc.</title>
+  <meta name="description" content="How Intelli Infotech builds high-performance development teams — qualification, training, and team formation." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <style>
+    .ii-hero { background: linear-gradient(135deg,#fff 60%,#fff0f5 100%); border-left: 4px solid var(--accent); padding: 24px 28px 20px 24px; margin-bottom: 28px; border-radius: 0 4px 4px 0; }
+    .ii-hero__label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .ii-hero__headline { font-size: 24px; font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 10px; letter-spacing: -.3px; }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body { font-size: 14px; line-height: 1.7; color: var(--text-soft); max-width: 780px; }
+    .ii-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .ii-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 20px 18px 18px; border-radius: 0 0 4px 4px; transition: transform .22s,box-shadow .22s,border-top-color .22s; cursor: default; }
+    .ii-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(229,0,95,.10),0 2px 8px rgba(0,0,0,.07); border-top-color: var(--accent-dark); }
+    .ii-card__icon { font-size: 22px; margin-bottom: 10px; }
+    .ii-card__title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .ii-card__body { font-size: 13px; line-height: 1.65; color: var(--text-soft); margin: 0; padding: 0; }
+    .ii-card__body li { list-style: none; padding: 3px 0; display: flex; gap: 7px; align-items: flex-start; }
+    .ii-card__body li::before { content: '–'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+    /* Rank strip */
+    .ii-ranks { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 28px; }
+    .ii-rank { border: 1px solid var(--border); border-top: 3px solid var(--accent); background: var(--stripe); padding: 14px 16px; border-radius: 0 0 4px 4px; text-align: center; }
+    .ii-rank__icon { font-size: 24px; margin-bottom: 6px; }
+    .ii-rank__title { font-size: 13px; font-weight: 700; color: var(--text); }
+    .ii-rank__desc { font-size: 12px; color: var(--text-soft); margin-top: 4px; line-height: 1.4; }
+    .ii-section-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .ii-section-title { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    @media (max-width: 860px) { .ii-cards,.ii-ranks { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 520px) { .ii-cards,.ii-ranks { grid-template-columns: 1fr; } .ii-hero__headline { font-size: 20px; } }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Work Approach — Team Creation</div>
+      <h1 class="ii-hero__headline">The Right People, <em>Built for Your Project</em></h1>
+      <p class="ii-hero__body">We assemble teams from highly qualified engineers — selected by skill, experience, and fit — led by a senior developer who owns quality and delivery.</p>
+    </div>
+
+    <!-- Developer ranks -->
+    <div class="ii-section-label">Team Composition</div>
+    <div class="ii-section-title">Developer Rank Levels</div>
+    <div class="ii-ranks">
+      <div class="ii-rank">
+        <div class="ii-rank__icon">🥇</div>
+        <div class="ii-rank__title">Senior Developer</div>
+        <div class="ii-rank__desc">Leads the team, owns architecture decisions and code quality</div>
+      </div>
+      <div class="ii-rank">
+        <div class="ii-rank__icon">🥈</div>
+        <div class="ii-rank__title">Mid-Level Developer</div>
+        <div class="ii-rank__desc">Core implementation, feature ownership, and mentoring</div>
+      </div>
+      <div class="ii-rank">
+        <div class="ii-rank__icon">🥉</div>
+        <div class="ii-rank__title">Junior Developer</div>
+        <div class="ii-rank__desc">Supported development with fast onboarding via internal training</div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="ii-section-label">Our Approach</div>
+    <div class="ii-section-title">How We Build &amp; Train Teams</div>
+    <div class="ii-cards">
+
+      <div class="ii-card">
+        <div class="ii-card__icon">🎓</div>
+        <div class="ii-card__title">Qualification Standards</div>
+        <ul class="ii-card__body">
+          <li>Top graduates from leading technical universities</li>
+          <li>Strong English communication across all levels</li>
+          <li>Mandatory internal training before joining any project</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">📖</div>
+        <div class="ii-card__title">Internal Training System</div>
+        <ul class="ii-card__body">
+          <li>Enforced coding standards across every project</li>
+          <li>Knowledge-sharing database of skills and expertise</li>
+          <li>Any team member can seek or share advice at any time</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">🎯</div>
+        <div class="ii-card__title">Project-Specific Assembly</div>
+        <ul class="ii-card__body">
+          <li>Team built around your project's unique requirements</li>
+          <li>Technical and personal fit both considered</li>
+          <li>Senior lead recommends optimal team size for delivery</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">⚡</div>
+        <div class="ii-card__title">Key Efficiency Factors</div>
+        <ul class="ii-card__body">
+          <li>Talent, ability, and personality considered in every hire</li>
+          <li>Quick onboarding — productive from day one</li>
+          <li>Cohesive unit built to meet and exceed expectations</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

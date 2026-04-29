@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Intelli Infotech Inc.</title>
+  <meta name="description" content="Full software development lifecycle services — software development, business automation, web solutions, and mobile solutions." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    /* 2×2 service card grid */
+    .ii-services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 22px 0;
+    }
+
+    .ii-svc-card {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 18px 18px 16px;
+      background: var(--stripe);
+    }
+
+    .ii-svc-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-soft);
+      margin: 0 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ii-svc-card ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ii-svc-card ul li {
+      list-style: none;
+      padding: 4px 0;
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .ii-svc-card ul li:last-child { border-bottom: none; }
+
+    .ii-svc-card ul li::before {
+      content: '▶';
+      font-size: 8px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    /* "We listen" tagline strip */
+    .ii-tagline-strip {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: var(--text-base);
+      padding: 8px 14px;
+      margin: 4px 0 18px;
+    }
+
+    @media (max-width: 680px) {
+      .ii-services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <h1 class="ii-section-heading">Intelli Infotech Software Development Services</h1>
+
+    <p class="ii-intro">
+      Drawing on over twenty years of experience across various fields, Intelli Infotech is in a
+      position to offer the full software development cycle as well as a broad range of specialist
+      services:
+    </p>
+
+    <!-- ── 2×2 card grid ── -->
+    <div class="ii-services-grid">
+
+      <div class="ii-svc-card">
+        <h3>Software Development Life-Cycle Services</h3>
+        <ul>
+          <li>Software product research and development</li>
+          <li>Software architecture design</li>
+          <li>Web &amp; desktop software development</li>
+          <li>Quality assurance</li>
+          <li>Migration &amp; re-engineering</li>
+          <li>Software integration</li>
+          <li>Maintenance</li>
+        </ul>
+      </div>
+
+      <div class="ii-svc-card">
+        <h3>Business Automation Software Solutions</h3>
+        <ul>
+          <li>Complex custom business solutions with deep company analysis</li>
+          <li>ERP and CRM system creation and customisation</li>
+          <li>Point of sale (POS) systems</li>
+          <li>Document management systems</li>
+          <li>Invoicing software solutions</li>
+          <li>Analysing and reporting tools</li>
+          <li>Project and goal management software, tracking systems</li>
+          <li>Corporate portals &amp; intranets</li>
+        </ul>
+      </div>
+
+      <div class="ii-svc-card">
+        <h3>Web Solutions</h3>
+        <ul>
+          <li>Educational systems</li>
+          <li>Informational portals</li>
+          <li>Corporate portals &amp; intranets</li>
+          <li>Highly specialised and complex e-commerce systems</li>
+          <li>Rich UI web applications</li>
+          <li>Software as a service (SaaS) solutions</li>
+        </ul>
+      </div>
+
+      <div class="ii-svc-card">
+        <h3>Mobile Solutions</h3>
+        <ul>
+          <li>Mobile business solutions</li>
+          <li>Mobile web solutions</li>
+          <li>Touch-screen solutions</li>
+          <li>iOS, Android, and Windows Phone native mobile applications</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ── Tagline ── -->
+    <div class="ii-tagline-strip">We listen. We care. We develop in-house!</div>
+
+    <!-- ── Supporting paragraphs ── -->
+    <h2 class="ii-service-heading">Integration &amp; Research</h2>
+    <div class="ii-service-body">
+      The expertise and substantial experience of our developers allows us to not only develop new
+      applications, but also carry out the integration of new software into existing systems —
+      which requires a deep understanding of existing source code — and to research and develop
+      services that determine more efficient ways of implementing even the most challenging ideas
+      in a programming language.
+    </div>
+
+    <h2 class="ii-service-heading">Quality Assurance</h2>
+    <div class="ii-service-body">
+      To ensure quality software delivery, we operate a dedicated testing lab where all applications
+      undergo thorough testing and quality assurance. Testers work closely with developers, sharing
+      ideas and cooperating to increase process efficiency. Testing is an integral part of every
+      development engagement.
+    </div>
+
+    <h2 class="ii-service-heading">Maintenance &amp; Migration</h2>
+    <div class="ii-service-body">
+      After delivery, we offer maintenance services that include support, software transition and
+      improvement, software modifications, migration to different platforms, and retirement of
+      software when needed. We also provide migration as a standalone service for clients moving an
+      existing application to another platform or programming language.
+    </div>
+
+    <h2 class="ii-service-heading">Our People</h2>
+    <div class="ii-service-body">
+      We work with highly qualified IT professionals and talented junior developers. Team building
+      and the professional growth of each employee are priorities for us — ensuring we can provide
+      stable, high-quality outsourcing software services for many years to come.
+    </div>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

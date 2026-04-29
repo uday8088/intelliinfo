@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company – Intelli Infotech Inc.</title>
+  <meta name="description" content="About Intelli Infotech Inc. — outsourcing software development company since 2003, serving the EU, USA, and beyond." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    /* Two-column model cards */
+    .ii-model-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .ii-model-card {
+      border-top: 3px solid var(--accent);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 18px 20px;
+      background: var(--stripe);
+    }
+
+    .ii-model-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    .ii-model-card p {
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text);
+    }
+
+    .ii-model-card strong {
+      color: var(--accent);
+    }
+
+    /* Five principles list */
+    .ii-principles {
+      margin: 10px 0 0 20px;
+    }
+
+    .ii-principles li {
+      padding: 5px 0;
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text);
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .ii-principles li::before {
+      content: '▶';
+      font-size: 9px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* IP / guarantee strip */
+    .ii-guarantee {
+      border-left: 3px solid var(--accent);
+      background: var(--stripe);
+      padding: 12px 16px;
+      margin: 20px 0;
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      .ii-model-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar injected by navbar-loader.js -->
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <h1 class="ii-section-heading">Outsourcing Software Development Company</h1>
+
+    <p class="ii-intro">
+      Intelli Infotech is a well-known, growing outsourcing software development company that has been
+      in this business since 2003. Our experience, expertise, and competence have made us one of the
+      most reputable software development companies in Europe and the US.
+    </p>
+
+    <br />
+
+    <p class="ii-intro">
+      Our clients are enterprises in the EU, the USA, and other countries all over the world.
+      Intelli Infotech offers software development companies a range of outsourcing services and
+      develops custom software applications for other industries, tailoring them specifically to
+      each client's needs and requirements.
+    </p>
+
+    <!-- ── Collaboration models ── -->
+    <h2 class="ii-service-heading">We Offer Two Collaboration Models</h2>
+
+    <div class="ii-model-grid">
+      <div class="ii-model-card">
+        <h3>Development of Custom Software Applications</h3>
+        <p>
+          A project-oriented model which includes the implementation of applications and systems
+          with a full software development cycle — from initial requirements analysis through to
+          delivery and further maintenance.
+        </p>
+      </div>
+      <div class="ii-model-card">
+        <h3>Offshore Development Center</h3>
+        <p>
+          Software development services outsourced to our established and well-organised team of
+          dedicated full-time developers — giving you a seamless, cost-effective extension of
+          your own team.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Payment models ── -->
+    <h2 class="ii-service-heading">We Offer Two Payment Models</h2>
+
+    <div class="ii-model-grid">
+      <div class="ii-model-card">
+        <h3><strong>Hourly Time &amp; Materials</strong></h3>
+        <p>
+          A flexible model which allows you to change your mind frequently. It does not require
+          in-depth planning of project details up front and is used most often amongst our clients.
+          For projects based on this model you can typically expect results within days.
+        </p>
+      </div>
+      <div class="ii-model-card">
+        <h3><strong>Fixed Price</strong></h3>
+        <p>
+          A model which gives you the security of a fixed price for the project. It generally
+          requires extensive planning up front so that we can provide a realistic estimate.
+          Fixed-price projects often cost more than hourly projects, since we assume the
+          project risk.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── IP guarantee ── -->
+    <div class="ii-guarantee">
+      Intelli Infotech has a strict intellectual property policy. We guarantee the protection and
+      security of the property rights and source code received from our clients and developed in
+      cooperation with us. All work delivered, and any ideas and information contained therein,
+      are owned exclusively by the client in perpetuity.
+    </div>
+
+    <!-- ── Five core principles ── -->
+    <h2 class="ii-service-heading">We Strictly Observe Five Core Principles</h2>
+
+    <ul class="ii-principles">
+      <li>Accessibility 24/7</li>
+      <li>Flexibility with regards to clients' needs, requirements, and work styles</li>
+      <li>Staff with good English skills</li>
+      <li>Intellectual property protection</li>
+      <li>Well-trained and qualified staff</li>
+    </ul>
+
+    <!-- ── Closing paragraph ── -->
+    <div class="ii-service-body" style="margin-top: 24px; margin-left: 0;">
+      Intelli Infotech pursues a unique approach to providing the best service for our clients.
+      It is based on four key factors: our extensive experience, teamwork and staff training,
+      project management, and a professional system for handling our clients.
+    </div>
+
+  </main>
+
+  <!-- Footer injected by footer-loader.js -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

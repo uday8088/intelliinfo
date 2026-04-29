@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offshore Development Center – Intelli Infotech Inc.</title>
+  <meta name="description" content="Intelli Infotech Offshore Development Center — dedicated teams, IP protection, full lifecycle support since 2003." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    /* ── Hero ── */
+    .ii-hero {
+      background: linear-gradient(135deg, #fff 60%, #fff0f5 100%);
+      border-left: 4px solid var(--accent);
+      padding: 24px 28px 20px 24px;
+      margin-bottom: 28px;
+      border-radius: 0 4px 4px 0;
+    }
+    .ii-hero__label {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+    }
+    .ii-hero__headline {
+      font-size: 24px; font-weight: 700; color: var(--text);
+      line-height: 1.25; margin-bottom: 12px; letter-spacing: -.3px;
+    }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body { font-size: 14px; line-height: 1.7; color: var(--text-soft); max-width: 820px; }
+
+    /* ── Page layout: cards left, sidebar right ── */
+    .ii-odc-layout {
+      display: grid;
+      grid-template-columns: 1fr 256px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* ── Card grid: 2 columns inside the left column ── */
+    .ii-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 0;
+    }
+    .ii-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 18px 16px 16px;
+      border-radius: 0 0 4px 4px;
+      transition: transform .22s ease, box-shadow .22s ease, border-top-color .22s ease;
+      cursor: default;
+    }
+    .ii-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(229,0,95,.10), 0 2px 6px rgba(0,0,0,.07);
+      border-top-color: var(--accent-dark);
+    }
+    .ii-card__icon { font-size: 20px; margin-bottom: 8px; line-height: 1; }
+    .ii-card__title {
+      font-size: 13px; font-weight: 700; color: var(--text);
+      margin-bottom: 8px; padding-bottom: 7px;
+      border-bottom: 1px solid var(--border); line-height: 1.3;
+    }
+    .ii-card__body { font-size: 13px; line-height: 1.6; color: var(--text-soft); margin: 0; padding: 0; }
+    .ii-card__body li {
+      list-style: none; padding: 2px 0;
+      display: flex; gap: 7px; align-items: flex-start;
+    }
+    .ii-card__body li::before { content: '–'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+
+    /* ── Sticky sidebar ── */
+    .ii-odc-sidebar {
+      position: sticky;
+      top: 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ii-sidebar-panel {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      background: var(--stripe);
+      border-radius: 0 0 4px 4px;
+      overflow: hidden;
+    }
+    .ii-sidebar-panel__title {
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      padding: 12px 16px 10px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .ii-sidebar-panel ul { margin: 0; padding: 8px 0; }
+    .ii-sidebar-panel ul li {
+      list-style: none;
+      font-size: 13px; color: var(--text);
+      padding: 6px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex; gap: 8px; align-items: flex-start;
+      line-height: 1.35;
+    }
+    .ii-sidebar-panel ul li:last-child { border-bottom: none; }
+    .ii-sidebar-panel ul li::before {
+      content: '▶';
+      font-size: 7px; color: var(--accent);
+      flex-shrink: 0; margin-top: 4px;
+    }
+
+    /* Lifecycle steps panel */
+    .ii-lifecycle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .ii-lifecycle__step {
+      padding: 10px 14px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      font-size: 12.5px; font-weight: 600; color: var(--text);
+      display: flex; align-items: center; gap: 7px;
+    }
+    .ii-lifecycle__step:nth-child(even) { border-right: none; }
+    .ii-lifecycle__step:nth-last-child(-n+2) { border-bottom: none; }
+    .ii-lifecycle__step span { font-size: 15px; }
+
+    /* IP guarantee box */
+    .ii-ip-box {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      background: linear-gradient(135deg, #fff0f5, #fff);
+      border-radius: 0 0 4px 4px;
+      padding: 14px 16px;
+      font-size: 13px; line-height: 1.65; color: var(--text-soft);
+    }
+    .ii-ip-box strong { color: var(--text); display: block; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+
+    @media (max-width: 820px) {
+      .ii-odc-layout { grid-template-columns: 1fr; }
+      .ii-odc-sidebar { position: static; }
+    }
+    @media (max-width: 520px) {
+      .ii-cards { grid-template-columns: 1fr; }
+      .ii-hero__headline { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <!-- ══ Hero ═══════════════════════════════════════════════════════ -->
+    <div class="ii-hero">
+      <div class="ii-hero__label">Company — Offshore Development Center</div>
+      <h1 class="ii-hero__headline">
+        Your Dedicated Team, <em>Offshore &amp; On-Demand</em>
+      </h1>
+      <p class="ii-hero__body">
+        Since 2003, Intelli Infotech has provided ODC services that act as a seamless extension
+        of your in-house team — delivering skilled engineers, full lifecycle support, and
+        guaranteed IP protection at a cost-effective rate.
+      </p>
+    </div>
+
+    <div class="ii-odc-layout">
+
+      <!-- ══ Cards (left) ═══════════════════════════════════════════ -->
+      <div class="ii-cards">
+
+        <div class="ii-card">
+          <div class="ii-card__icon">🏗️</div>
+          <div class="ii-card__title">What Is an ODC?</div>
+          <ul class="ii-card__body">
+            <li>A virtual office with developers exclusively assigned to your company</li>
+            <li>Works to your standards, processes, and requirements</li>
+            <li>Cost-effective alternative to project-based outsourcing</li>
+            <li>Scales up or down based on your roadmap</li>
+          </ul>
+        </div>
+
+        <div class="ii-card">
+          <div class="ii-card__icon">👥</div>
+          <div class="ii-card__title">Team Structure</div>
+          <ul class="ii-card__body">
+            <li>Senior developer / tech lead manages the team</li>
+            <li>You participate in team selection and composition</li>
+            <li>Well-trained engineers with highly specialised competencies</li>
+            <li>No additional costs for office space or infrastructure</li>
+          </ul>
+        </div>
+
+        <div class="ii-card">
+          <div class="ii-card__icon">📡</div>
+          <div class="ii-card__title">Communication &amp; Transparency</div>
+          <ul class="ii-card__body">
+            <li>Daily task reports keeping you fully informed</li>
+            <li>Excellent English communication at all team levels</li>
+            <li>Regular sprint reviews, demos, and retrospectives</li>
+            <li>Tools of your choice — Jira, Slack, Teams, or GitHub</li>
+          </ul>
+        </div>
+
+        <div class="ii-card">
+          <div class="ii-card__icon">💰</div>
+          <div class="ii-card__title">Commercial Advantage</div>
+          <ul class="ii-card__body">
+            <li>ODC rates lower than project-based outsourcing</li>
+            <li>Predictable monthly billing with no surprise costs</li>
+            <li>Reduce time-to-hire with a ready-to-go team</li>
+            <li>Start with a test project to validate quality</li>
+          </ul>
+        </div>
+
+        <div class="ii-card">
+          <div class="ii-card__icon">🔒</div>
+          <div class="ii-card__title">IP &amp; Confidentiality</div>
+          <ul class="ii-card__body">
+            <li>Strict IP policy — all code belongs to you</li>
+            <li>NDA signed before engagement commences</li>
+            <li>Secure development environments and access controls</li>
+            <li>Source code rights fully transferred at all project stages</li>
+          </ul>
+        </div>
+
+        <div class="ii-card">
+          <div class="ii-card__icon">🤖</div>
+          <div class="ii-card__title">Modern AI-Ready Teams</div>
+          <ul class="ii-card__body">
+            <li>Engineers skilled in LLM integration and AI agent development</li>
+            <li>Cloud-native development on Azure, AWS, and GCP</li>
+            <li>DevOps-first approach with CI/CD from day one</li>
+            <li>Full-stack capability — frontend, backend, data, and mobile</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- ══ Sidebar (right) ════════════════════════════════════════ -->
+      <div class="ii-odc-sidebar">
+
+        <!-- Benefits panel -->
+        <div class="ii-sidebar-panel">
+          <div class="ii-sidebar-panel__title">Why Intelli Infotech ODC</div>
+          <ul>
+            <li>Highly trained software engineers</li>
+            <li>Flexibility to match your needs</li>
+            <li>Excellent communication skills</li>
+            <li>Intellectual property protection</li>
+            <li>Efficient team building</li>
+            <li>Operating since 2003</li>
+            <li>Competitive hourly rates</li>
+            <li>Daily task transparency</li>
+            <li>Fair &amp; reliable partnership</li>
+          </ul>
+        </div>
+
+        <!-- Lifecycle panel -->
+        <div class="ii-sidebar-panel">
+          <div class="ii-sidebar-panel__title">Full ODC Lifecycle</div>
+          <div class="ii-lifecycle">
+            <div class="ii-lifecycle__step"><span>💬</span> Consulting</div>
+            <div class="ii-lifecycle__step"><span>📋</span> Management</div>
+            <div class="ii-lifecycle__step"><span>⚙️</span> Development</div>
+            <div class="ii-lifecycle__step"><span>🚀</span> Deployment</div>
+            <div class="ii-lifecycle__step"><span>🔧</span> Maintenance</div>
+            <div class="ii-lifecycle__step"><span>🛡️</span> Support</div>
+          </div>
+        </div>
+
+        <!-- IP guarantee -->
+        <div class="ii-ip-box">
+          <strong>🔐 IP Guarantee</strong>
+          All source code and intellectual property developed in your ODC is fully owned by you.
+          NDA and IP assignment agreements are in place before work begins.
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

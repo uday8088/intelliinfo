@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud &amp; Data Services — Intelli Infotech Inc.</title>
+  <meta name="description" content="FedRAMP cloud migration, data platform modernisation, and AI-ready data architecture for government and enterprise clients." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--font:'Aptos','Outfit','Segoe UI',ui-sans-serif,system-ui,sans-serif;}</style>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .ii-hero{background:linear-gradient(135deg,#fff 60%,#fff0f5 100%);border-left:4px solid var(--accent);padding:28px 28px 24px 24px;margin-bottom:36px;border-radius:0 4px 4px 0;}
+    .ii-hero__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .ii-hero__headline{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+    .ii-hero__headline em{color:var(--accent);font-style:normal;}
+    .ii-hero__body{font-size:15px;line-height:1.75;color:var(--text-soft);max-width:820px;margin:0 0 18px;}
+    .ii-hero__stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap;}
+    .ii-hero__stat strong{display:block;font-size:22px;font-weight:700;color:var(--accent);line-height:1;}
+    .ii-hero__stat span{font-size:12px;color:var(--text-soft);letter-spacing:.03em;}
+    .ii-sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .ii-sec-title{font-size:19px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .viz-panel{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 6px 6px;padding:22px 22px 18px;margin-bottom:22px;}
+    .viz-panel__title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+    .viz-panel__sub{font-size:12px;color:var(--text-soft);margin-bottom:18px;}
+    .viz-row-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+    .viz-row-32{display:grid;grid-template-columns:2fr 1fr;gap:22px;margin-bottom:22px;}
+    @media(max-width:820px){.viz-row-2,.viz-row-32{grid-template-columns:1fr;}}
+
+    /* ── Migration journey ── */
+    .mig-steps{display:flex;flex-direction:column;gap:0;position:relative;padding-left:30px;}
+    .mig-steps::before{content:'';position:absolute;left:12px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,var(--accent),#c7d2fe);}
+    .mig-step{position:relative;padding:0 0 18px 18px;}
+    .mig-step:last-child{padding-bottom:0;}
+    .mig-dot{position:absolute;left:-18px;top:3px;width:16px;height:16px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;}
+    .mig-period{font-size:10.5px;font-weight:700;color:var(--accent);margin-bottom:2px;}
+    .mig-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+    .mig-desc{font-size:12px;color:var(--text-soft);line-height:1.5;}
+
+    /* ── Architecture tiers ── */
+    .arch-layers{display:flex;flex-direction:column;gap:6px;}
+    .arch-layer{border-radius:6px;padding:10px 14px;display:flex;align-items:center;gap:12px;}
+    .arch-layer__icon{font-size:18px;flex-shrink:0;}
+    .arch-layer__title{font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:2px;}
+    .arch-layer__desc{font-size:11.5px;color:var(--text-soft);}
+    .arch-layer__tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;}
+    .tag-sm{font-size:9.5px;background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:1px 7px;color:inherit;font-weight:600;}
+
+    /* ── FinOps savings chart ── */
+    .bar-chart-wrap{position:relative;height:170px;display:flex;align-items:flex-end;gap:16px;padding:0 4px 28px;border-bottom:2px solid #eee;}
+    .bar-group{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
+    .bar-group__val{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+    .bar-group__bar{width:100%;border-radius:3px 3px 0 0;}
+    .bar-group__label{font-size:10px;color:#64748b;margin-top:5px;text-align:center;}
+    .bar-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;}
+    .bar-legend__item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-soft);}
+    .bar-legend__dot{width:10px;height:10px;border-radius:2px;}
+
+    /* ── Hbar ── */
+    .hbar-row{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
+    .hbar-label{font-size:12px;color:var(--text-soft);width:180px;flex-shrink:0;text-align:right;}
+    .hbar-track{flex:1;height:13px;background:#f1f5f9;border-radius:7px;overflow:hidden;}
+    .hbar-fill{height:100%;border-radius:7px;transition:width 1s cubic-bezier(.4,0,.2,1);}
+    .hbar-pct{font-size:11px;font-weight:700;color:var(--text-soft);width:36px;}
+
+    /* ── Donut ── */
+    .donut-wrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+    .dl-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-soft);margin-bottom:7px;}
+    .dl-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+    .dl-val{font-weight:700;color:var(--text);margin-left:auto;padding-left:12px;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Government Services — Cloud &amp; Data Services</div>
+      <h1 class="ii-hero__headline">Secure Cloud. <em>Trusted Data.</em><br/>AI-Ready Infrastructure.</h1>
+      <p class="ii-hero__body">We migrate, modernise, and manage cloud infrastructure and data platforms for government agencies — with FedRAMP compliance, FinOps discipline, and an AI-ready data layer built in from the start.</p>
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat"><strong>AWS &amp; Azure</strong><span>Multi-Cloud Advisory</span></div>
+        <div class="ii-hero__stat"><strong>Gov &amp; Enterprise</strong><span>Compliance-Aware Design</span></div>
+        <div class="ii-hero__stat"><strong>FinOps</strong><span>Cost Optimisation Focus</span></div>
+        <div class="ii-hero__stat"><strong>AI-Ready</strong><span>Data Architecture</span></div>
+      </div>
+    </div>
+
+    <!-- Architecture layers -->
+    <div class="ii-sec-label">Platform Architecture</div>
+    <h2 class="ii-sec-title">Reference Architecture — Gov Cloud Data Platform</h2>
+    <div class="viz-panel" style="margin-bottom:22px;">
+      <div class="arch-layers">
+        <div class="arch-layer" style="background:#fff0f5;color:#9f1239;">
+          <div class="arch-layer__icon">🤖</div>
+          <div>
+            <div class="arch-layer__title">AI &amp; Analytics Layer</div>
+            <div class="arch-layer__desc">Machine learning inference, NLP pipelines, and executive dashboards</div>
+            <div class="arch-layer__tags"><span class="tag-sm">Azure ML</span><span class="tag-sm">SageMaker</span><span class="tag-sm">Power BI</span><span class="tag-sm">Databricks</span></div>
+          </div>
+        </div>
+        <div class="arch-layer" style="background:#eff6ff;color:#1e3a8a;">
+          <div class="arch-layer__icon">📊</div>
+          <div>
+            <div class="arch-layer__title">Data Platform Layer</div>
+            <div class="arch-layer__desc">Lakehouse, data mesh, governance, lineage, and quality pipelines</div>
+            <div class="arch-layer__tags"><span class="tag-sm">Data Lake</span><span class="tag-sm">Delta Lake</span><span class="tag-sm">dbt</span><span class="tag-sm">Purview</span><span class="tag-sm">Glue</span></div>
+          </div>
+        </div>
+        <div class="arch-layer" style="background:#f5f3ff;color:#4c1d95;">
+          <div class="arch-layer__icon">🔗</div>
+          <div>
+            <div class="arch-layer__title">Integration &amp; API Layer</div>
+            <div class="arch-layer__desc">Event-driven microservices, API gateways, and real-time data streaming</div>
+            <div class="arch-layer__tags"><span class="tag-sm">Kafka</span><span class="tag-sm">API Gateway</span><span class="tag-sm">Azure Service Bus</span><span class="tag-sm">GraphQL</span></div>
+          </div>
+        </div>
+        <div class="arch-layer" style="background:#f0fdf4;color:#14532d;">
+          <div class="arch-layer__icon">☁️</div>
+          <div>
+            <div class="arch-layer__title">Cloud Infrastructure Layer</div>
+            <div class="arch-layer__desc">FedRAMP landing zones, container orchestration, and IaC automation</div>
+            <div class="arch-layer__tags"><span class="tag-sm">AWS GovCloud</span><span class="tag-sm">Azure Gov</span><span class="tag-sm">Kubernetes</span><span class="tag-sm">Terraform</span></div>
+          </div>
+        </div>
+        <div class="arch-layer" style="background:#fef9c3;color:#713f12;">
+          <div class="arch-layer__icon">🔒</div>
+          <div>
+            <div class="arch-layer__title">Security &amp; Compliance Layer</div>
+            <div class="arch-layer__desc">Zero-trust architecture, FedRAMP, FISMA, and continuous ATO monitoring</div>
+            <div class="arch-layer__tags"><span class="tag-sm">FedRAMP High</span><span class="tag-sm">FISMA</span><span class="tag-sm">SIEM</span><span class="tag-sm">Zero Trust</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viz-row-2">
+      <!-- Migration roadmap -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Cloud Migration Journey</div>
+        <div class="viz-panel__sub">Phased approach — minimising disruption at every stage</div>
+        <div class="mig-steps">
+          <div class="mig-step">
+            <div class="mig-dot" style="background:#e5005f;">1</div>
+            <div class="mig-period">Weeks 1–4</div>
+            <div class="mig-title">Discover &amp; Assess</div>
+            <div class="mig-desc">Application portfolio inventory, dependency mapping, TCO analysis, and cloud readiness scoring.</div>
+          </div>
+          <div class="mig-step">
+            <div class="mig-dot" style="background:#f97316;">2</div>
+            <div class="mig-period">Weeks 5–8</div>
+            <div class="mig-title">Design Landing Zone</div>
+            <div class="mig-desc">FedRAMP-compliant account structure, network topology, IAM, and governance policies.</div>
+          </div>
+          <div class="mig-step">
+            <div class="mig-dot" style="background:#3b82f6;">3</div>
+            <div class="mig-period">Months 3–5</div>
+            <div class="mig-title">Migrate &amp; Modernise</div>
+            <div class="mig-desc">Lift-and-shift, re-platform, or refactor — wave-based migration with rollback controls.</div>
+          </div>
+          <div class="mig-step">
+            <div class="mig-dot" style="background:#a855f7;">4</div>
+            <div class="mig-period">Months 5–6</div>
+            <div class="mig-title">Optimise &amp; Govern</div>
+            <div class="mig-desc">FinOps dashboards, auto-scaling policies, rightsizing, and continuous security posture.</div>
+          </div>
+          <div class="mig-step">
+            <div class="mig-dot" style="background:#22c55e;">5</div>
+            <div class="mig-period">Ongoing</div>
+            <div class="mig-title">Operate &amp; Evolve</div>
+            <div class="mig-desc">Managed operations, ATO maintenance, AI capability layering, and FinOps maturity.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FinOps savings bar chart + donut -->
+      <div>
+        <div class="viz-panel" style="margin-bottom:22px;">
+          <div class="viz-panel__title">FinOps Savings by Lever</div>
+          <div class="viz-panel__sub">% cost reduction achieved per optimisation category</div>
+          <div class="bar-chart-wrap" id="finopsChart"></div>
+        </div>
+        <div class="viz-panel">
+          <div class="viz-panel__title">Workload Migration Strategy Mix</div>
+          <div class="viz-panel__sub">Portfolio distribution across migration patterns</div>
+          <div class="donut-wrap">
+            <canvas id="migDonut" width="120" height="120"></canvas>
+            <div id="migLegend"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcomes hbars -->
+    <div class="viz-panel">
+      <div class="viz-panel__title">Measured Cloud &amp; Data Outcomes</div>
+      <div class="viz-panel__sub">Average improvements across completed government engagements</div>
+      <div id="cloudHbars"></div>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script>
+    // FinOps bar chart
+    (function(){
+      const data=[
+        {label:'Rightsizing',val:28,color:'#e5005f'},
+        {label:'Reserved Instances',val:38,color:'#3b82f6'},
+        {label:'Auto-Scaling',val:22,color:'#a855f7'},
+        {label:'Storage Tiering',val:18,color:'#22c55e'},
+        {label:'Unused Resources',val:31,color:'#f97316'},
+      ];
+      const wrap=document.getElementById('finopsChart');
+      const MAX=40,H=140;
+      data.forEach(d=>{
+        const g=document.createElement('div');g.className='bar-group';
+        const bar=document.createElement('div');
+        bar.style.cssText=`width:100%;height:${Math.round((d.val/MAX)*H)}px;background:${d.color};border-radius:3px 3px 0 0;transition:opacity .2s;`;
+        bar.onmouseenter=()=>bar.style.opacity='.75';bar.onmouseleave=()=>bar.style.opacity='1';
+        const val=document.createElement('div');val.className='bar-group__val';val.textContent=d.val+'%';
+        const lbl=document.createElement('div');lbl.className='bar-group__label';lbl.textContent=d.label;
+        g.appendChild(val);g.appendChild(bar);g.appendChild(lbl);
+        wrap.appendChild(g);
+      });
+    })();
+
+    // Migration strategy donut
+    (function(){
+      const segs=[
+        {label:'Rehost (Lift & Shift)',pct:30,color:'#94a3b8'},
+        {label:'Replatform',pct:28,color:'#3b82f6'},
+        {label:'Refactor / Re-arch',pct:22,color:'#e5005f'},
+        {label:'Retire / Replace',pct:20,color:'#22c55e'},
+      ];
+      const c=document.getElementById('migDonut'),ctx=c.getContext('2d');
+      const cx=60,cy=60,ro=54,ri=30;let s=-Math.PI/2;
+      segs.forEach(sg=>{const a=(sg.pct/100)*Math.PI*2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,ro,s,s+a);ctx.closePath();ctx.fillStyle=sg.color;ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();s+=a;});
+      ctx.beginPath();ctx.arc(cx,cy,ri,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();
+      ctx.fillStyle='#1e293b';ctx.font='bold 9px Outfit,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Strategy',cx,cy-4);ctx.fillText('Mix',cx,cy+6);
+      const leg=document.getElementById('migLegend');
+      segs.forEach(sg=>{leg.innerHTML+=`<div class="dl-item"><div class="dl-dot" style="background:${sg.color}"></div><span>${sg.label}</span><span class="dl-val">${sg.pct}%</span></div>`;});
+    })();
+
+    // Hbars
+    (function(){
+      const items=[
+        {label:'Infrastructure Cost Savings',pct:35,color:'#e5005f'},
+        {label:'Deployment Speed Improvement',pct:78,color:'#3b82f6'},
+        {label:'Uptime / Availability',pct:99,color:'#22c55e'},
+        {label:'Security Posture Score',pct:88,color:'#a855f7'},
+        {label:'Data Query Performance',pct:72,color:'#f97316'},
+        {label:'FedRAMP ATO Success Rate',pct:100,color:'#eab308'},
+      ];
+      const wrap=document.getElementById('cloudHbars');
+      items.forEach((it,i)=>{
+        wrap.innerHTML+=`<div class="hbar-row"><div class="hbar-label">${it.label}</div><div class="hbar-track"><div class="hbar-fill" id="chb${i}" style="width:0%;background:${it.color}"></div></div><div class="hbar-pct">${it.pct}%</div></div>`;
+      });
+      items.forEach((_,i)=>setTimeout(()=>{document.getElementById('chb'+i).style.width=items[i].pct+'%';},150+i*80));
+    })();
+  </script>
+</body>
+</html>

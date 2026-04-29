@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Modernization — Intelli Infotech Inc.</title>
+  <meta name="description" content="Legacy system modernisation, cloud migration, and AI-enabled platform transformation for government agencies and enterprises." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--font:'Aptos','Outfit','Segoe UI',ui-sans-serif,system-ui,sans-serif;}</style>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .ii-hero{background:linear-gradient(135deg,#fff 60%,#fff0f5 100%);border-left:4px solid var(--accent);padding:28px 28px 24px 24px;margin-bottom:36px;border-radius:0 4px 4px 0;}
+    .ii-hero__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .ii-hero__headline{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+    .ii-hero__headline em{color:var(--accent);font-style:normal;}
+    .ii-hero__body{font-size:15px;line-height:1.75;color:var(--text-soft);max-width:820px;margin:0 0 18px;}
+    .ii-hero__stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap;}
+    .ii-hero__stat strong{display:block;font-size:22px;font-weight:700;color:var(--accent);line-height:1;}
+    .ii-hero__stat span{font-size:12px;color:var(--text-soft);letter-spacing:.03em;}
+    .ii-sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .ii-sec-title{font-size:19px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .viz-panel{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 6px 6px;padding:22px 22px 18px;margin-bottom:22px;}
+    .viz-panel__title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+    .viz-panel__sub{font-size:12px;color:var(--text-soft);margin-bottom:18px;}
+    .viz-row-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+    .viz-row-32{display:grid;grid-template-columns:2fr 1fr;gap:22px;margin-bottom:22px;}
+    @media(max-width:820px){.viz-row-2,.viz-row-32{grid-template-columns:1fr;}}
+
+    /* ── Before/After comparison ── */
+    .ba-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;align-items:start;}
+    .ba-col{display:flex;flex-direction:column;gap:10px;}
+    .ba-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:4px;text-align:center;margin-bottom:4px;}
+    .ba-title--before{background:#fee2e2;color:#991b1b;}
+    .ba-title--after{background:#dcfce7;color:#166534;}
+    .ba-item{border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:12.5px;color:var(--text-soft);line-height:1.5;}
+    .ba-item strong{display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px;}
+    .ba-arrow{display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--accent);margin-top:36px;}
+
+    /* ── Maturity ladder ── */
+    .maturity{display:flex;flex-direction:column;gap:0;padding-left:24px;position:relative;}
+    .maturity::before{content:'';position:absolute;left:8px;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,#cbd5e1,var(--accent));}
+    .mat-level{position:relative;padding:0 0 18px 20px;}
+    .mat-level:last-child{padding-bottom:0;}
+    .mat-dot{position:absolute;left:-16px;top:3px;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px;}
+    .mat-num{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);margin-bottom:3px;}
+    .mat-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+    .mat-desc{font-size:12px;color:var(--text-soft);line-height:1.5;}
+
+    /* ── Bar chart ── */
+    .bar-chart-wrap{position:relative;height:190px;display:flex;align-items:flex-end;gap:14px;padding:0 4px 28px;border-bottom:2px solid #eee;}
+    .bar-group{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
+    .bar-group__val{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+    .bar-group__bar{width:100%;border-radius:3px 3px 0 0;}
+    .bar-group__label{font-size:10px;color:#64748b;margin-top:5px;text-align:center;white-space:nowrap;}
+    .bar-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;}
+    .bar-legend__item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-soft);}
+    .bar-legend__dot{width:10px;height:10px;border-radius:2px;}
+
+    /* ── Hbar ── */
+    .hbar-row{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
+    .hbar-label{font-size:12px;color:var(--text-soft);width:180px;flex-shrink:0;text-align:right;}
+    .hbar-track{flex:1;height:13px;background:#f1f5f9;border-radius:7px;overflow:hidden;}
+    .hbar-fill{height:100%;border-radius:7px;transition:width 1s cubic-bezier(.4,0,.2,1);}
+    .hbar-pct{font-size:11px;font-weight:700;color:var(--text-soft);width:36px;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Government Services — Digital Modernization</div>
+      <h1 class="ii-hero__headline">Replace the Old.<br/><em>Build</em> What Lasts. <em>Move</em> at Mission Speed.</h1>
+      <p class="ii-hero__body">We guide agencies from legacy-bound systems to cloud-native, AI-enabled platforms — with minimal disruption, maximum compliance, and a clear path from current state to future capability.</p>
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat"><strong>20+</strong><span>Years in Technology</span></div>
+        <div class="ii-hero__stat"><strong>Legacy → Cloud</strong><span>End-to-End Advisory</span></div>
+        <div class="ii-hero__stat"><strong>AI-Enabled</strong><span>Modern Stack Expertise</span></div>
+        <div class="ii-hero__stat"><strong>US &amp; India</strong><span>Delivery Reach</span></div>
+      </div>
+    </div>
+
+    <!-- Before / After -->
+    <div class="ii-sec-label">Transformation Impact</div>
+    <h2 class="ii-sec-title">Legacy vs. Modernised State</h2>
+    <div class="viz-panel" style="margin-bottom:22px;">
+      <div class="ba-grid">
+        <div class="ba-col">
+          <div class="ba-title ba-title--before">⚠ Legacy State — Before</div>
+          <div class="ba-item"><strong>Siloed, Monolithic Architecture</strong>Tightly coupled systems with no API layer — changes break everything</div>
+          <div class="ba-item"><strong>Manual, Paper-Based Workflows</strong>High cycle times, error-prone, no audit trail</div>
+          <div class="ba-item"><strong>On-Premise, Ageing Infrastructure</strong>High maintenance cost, security vulnerabilities, zero elasticity</div>
+          <div class="ba-item"><strong>No Data Visibility</strong>Decisions made on stale reports; no real-time insight</div>
+          <div class="ba-item"><strong>Accessibility Non-Compliant</strong>ADA/508 gaps creating legal and reputational risk</div>
+        </div>
+        <div class="ba-arrow">→</div>
+        <div class="ba-col">
+          <div class="ba-title ba-title--after">✓ Modernised State — After</div>
+          <div class="ba-item"><strong>Cloud-Native Microservices</strong>Composable, independently deployable, API-first design</div>
+          <div class="ba-item"><strong>AI-Augmented Automation</strong>Intelligent workflows, document capture, and process orchestration</div>
+          <div class="ba-item"><strong>FedRAMP Cloud Platform</strong>Scalable, secure, cost-optimised with continuous compliance</div>
+          <div class="ba-item"><strong>Real-Time Analytics</strong>Executive dashboards, predictive alerts, data-driven operations</div>
+          <div class="ba-item"><strong>WCAG 2.2 AA Compliant</strong>Inclusive by design, audited, certified, monitored</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viz-row-2">
+      <!-- Maturity ladder -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Digital Maturity Levels</div>
+        <div class="viz-panel__sub">We assess current state and map a path to Level 5</div>
+        <div class="maturity">
+          <div class="mat-level">
+            <div class="mat-dot" style="background:#ef4444;box-shadow:0 0 0 2px #ef4444;"></div>
+            <div class="mat-num">Level 1</div>
+            <div class="mat-title">Ad Hoc / Manual</div>
+            <div class="mat-desc">Paper, spreadsheets, disconnected tools. No standard processes.</div>
+          </div>
+          <div class="mat-level">
+            <div class="mat-dot" style="background:#f97316;box-shadow:0 0 0 2px #f97316;"></div>
+            <div class="mat-num">Level 2</div>
+            <div class="mat-title">Digitised</div>
+            <div class="mat-desc">Basic digital tools in place, but siloed and limited integration.</div>
+          </div>
+          <div class="mat-level">
+            <div class="mat-dot" style="background:#eab308;box-shadow:0 0 0 2px #eab308;"></div>
+            <div class="mat-num">Level 3</div>
+            <div class="mat-title">Connected</div>
+            <div class="mat-desc">Systems integrated via APIs. Workflow automation beginning.</div>
+          </div>
+          <div class="mat-level">
+            <div class="mat-dot" style="background:#3b82f6;box-shadow:0 0 0 2px #3b82f6;"></div>
+            <div class="mat-num">Level 4</div>
+            <div class="mat-title">Data-Driven</div>
+            <div class="mat-desc">Real-time analytics, predictive models, self-service insights.</div>
+          </div>
+          <div class="mat-level">
+            <div class="mat-dot" style="background:#22c55e;box-shadow:0 0 0 2px #22c55e;"></div>
+            <div class="mat-num">Level 5</div>
+            <div class="mat-title">AI-Enabled</div>
+            <div class="mat-desc">Intelligent automation, continuous optimisation, adaptive systems.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bar chart — maturity gains -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Maturity Score Gains — Sample Client</div>
+        <div class="viz-panel__sub">Domain scores before (grey) vs. after (red) modernisation engagement</div>
+        <div class="bar-chart-wrap" id="modBarChart"></div>
+        <div class="bar-legend">
+          <div class="bar-legend__item"><div class="bar-legend__dot" style="background:#cbd5e1;"></div>Before</div>
+          <div class="bar-legend__item"><div class="bar-legend__dot" style="background:#e5005f;"></div>After</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outcomes -->
+    <div class="viz-panel">
+      <div class="viz-panel__title">Measured Modernisation Outcomes</div>
+      <div class="viz-panel__sub">Average improvements across completed modernisation engagements</div>
+      <div id="modHbars"></div>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script>
+    // Bar chart
+    (function(){
+      const domains=[
+        {label:'Cloud',before:1.8,after:4.2},
+        {label:'Data',before:1.5,after:4.0},
+        {label:'Automation',before:1.2,after:3.9},
+        {label:'Security',before:2.0,after:4.3},
+        {label:'CX / UX',before:1.6,after:4.1},
+        {label:'Accessibility',before:1.0,after:4.5},
+      ];
+      const wrap=document.getElementById('modBarChart');
+      const MAX=5,H=160;
+      domains.forEach(d=>{
+        const group=document.createElement('div');group.className='bar-group';
+        const cluster=document.createElement('div');
+        cluster.style.cssText=`display:flex;gap:4px;align-items:flex-end;width:100%;height:${H}px;`;
+        [{val:d.before,color:'#cbd5e1'},{val:d.after,color:'#e5005f'}].forEach(b=>{
+          const bar=document.createElement('div');
+          bar.style.cssText=`flex:1;height:${Math.round((b.val/MAX)*H)}px;background:${b.color};border-radius:3px 3px 0 0;transition:opacity .2s;`;
+          bar.title=`${b.val.toFixed(1)}/5.0`;
+          bar.onmouseenter=()=>bar.style.opacity='.75';bar.onmouseleave=()=>bar.style.opacity='1';
+          cluster.appendChild(bar);
+        });
+        const val=document.createElement('div');val.className='bar-group__val';val.textContent=d.after.toFixed(1);
+        const lbl=document.createElement('div');lbl.className='bar-group__label';lbl.textContent=d.label;
+        group.appendChild(val);group.appendChild(cluster);group.appendChild(lbl);
+        wrap.appendChild(group);
+      });
+    })();
+
+    // Hbars
+    (function(){
+      const items=[
+        {label:'Infrastructure Cost Reduction',pct:40,color:'#e5005f'},
+        {label:'Process Automation Rate',pct:68,color:'#3b82f6'},
+        {label:'Deployment Frequency',pct:82,color:'#a855f7'},
+        {label:'Incident Resolution Time',pct:74,color:'#22c55e'},
+        {label:'User Satisfaction (CSAT)',pct:91,color:'#f97316'},
+        {label:'Compliance Coverage',pct:96,color:'#eab308'},
+      ];
+      const wrap=document.getElementById('modHbars');
+      items.forEach((it,i)=>{
+        wrap.innerHTML+=`<div class="hbar-row"><div class="hbar-label">${it.label}</div><div class="hbar-track"><div class="hbar-fill" id="mhb${i}" style="width:0%;background:${it.color}"></div></div><div class="hbar-pct">${it.pct}%</div></div>`;
+      });
+      items.forEach((_,i)=>setTimeout(()=>{document.getElementById('mhb'+i).style.width=items[i].pct+'%';},150+i*80));
+    })();
+  </script>
+</body>
+</html>

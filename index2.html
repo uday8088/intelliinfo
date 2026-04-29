@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelli Infotech Inc. — Digital Transformation &amp; Program Management Consulting</title>
+  <meta name="description" content="Intelli Infotech Inc. — Digital transformation, AI-driven modernisation, program management, and accessibility compliance consulting. Delivering outcomes since 2003." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --font: 'Aptos', 'Outfit', 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Hero intro block ─────────────────────────────────────────── */
+    .ii-hero {
+      background: linear-gradient(135deg, #fff 60%, #fff0f5 100%);
+      border-left: 4px solid var(--accent);
+      padding: 28px 28px 24px 24px;
+      margin-bottom: 36px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .ii-hero__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .ii-hero__headline {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 14px;
+      letter-spacing: -.3px;
+    }
+
+    .ii-hero__headline em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .ii-hero__body-wrap {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .ii-hero__body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-soft);
+      flex: 1;
+      min-width: 260px;
+      margin: 0;
+    }
+
+    .ii-hero__pie-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .ii-hero__pie-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ii-hero__pie-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--text-soft);
+      white-space: nowrap;
+    }
+
+    .ii-hero__pie-legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .ii-hero__stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .ii-hero__stat strong {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .ii-hero__stat span {
+      font-size: 12px;
+      color: var(--text-soft);
+      letter-spacing: .03em;
+    }
+
+    /* ── Section label above cards ────────────────────────────────── */
+    .ii-cards-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .ii-cards-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Compact 3-column capabilities ───────────────────────────── */
+    .ii-caps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-bottom: 36px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ii-cap {
+      padding: 18px 20px 18px;
+      border-right: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .ii-cap:last-child { border-right: none; }
+
+    .ii-cap__icon {
+      font-size: 18px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .ii-cap__title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      line-height: 1.3;
+    }
+
+    .ii-cap__list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ii-cap__list li {
+      list-style: none;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-soft);
+      padding: 2px 0;
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .ii-cap__list li::before {
+      content: '–';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .ii-caps { grid-template-columns: 1fr; }
+      .ii-cap  { border-right: none; border-bottom: 1px solid var(--border); }
+      .ii-cap:last-child { border-bottom: none; }
+    }
+
+    @media (max-width: 560px) {
+      .ii-hero__headline { font-size: 20px; }
+      .ii-hero__stats    { gap: 20px; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       VISUAL SHOWCASE SECTION
+    ═══════════════════════════════════════════════════════════════ */
+    .ii-visuals-section {
+      margin-top: 52px;
+    }
+
+    .ii-visuals-section .ii-cards-title {
+      margin-bottom: 6px;
+    }
+
+    .ii-visuals-intro {
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 780px;
+    }
+
+    /* ── Visual panel shared base ─────────────────────────────────── */
+    .viz-panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: 0 0 6px 6px;
+      padding: 22px 22px 18px;
+      margin-bottom: 28px;
+    }
+
+    .viz-panel__title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .viz-panel__sub {
+      font-size: 12px;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    /* ── Two-column layout for side-by-side panels ─────────────────── */
+    .viz-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 0;
+    }
+
+    .viz-row-3 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 22px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 820px) {
+      .viz-row-2, .viz-row-3 { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       1. BAR CHART — Transformation Maturity by Domain
+    ───────────────────────────────────────────────────────────────── */
+    .bar-chart-wrap {
+      position: relative;
+      height: 220px;
+      display: flex;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 0 4px 32px;
+      border-bottom: 2px solid #eee;
+    }
+
+    .bar-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      gap: 0;
+    }
+
+    .bar-group__val {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .bar-group__bar {
+      width: 100%;
+      border-radius: 3px 3px 0 0;
+      transition: opacity .2s;
+      cursor: default;
+      position: relative;
+    }
+
+    .bar-group__bar:hover { opacity: .82; }
+
+    .bar-group__label {
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10.5px;
+      color: var(--text-soft);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .bar-chart-legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .bar-chart-legend__item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--text-soft);
+    }
+
+    .bar-chart-legend__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       2. ROADMAP
+    ───────────────────────────────────────────────────────────────── */
+    .roadmap {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .roadmap::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent) 0%, #ffb3cc 100%);
+    }
+
+    .roadmap-phase {
+      position: relative;
+      padding: 0 0 20px 20px;
+    }
+
+    .roadmap-phase:last-child { padding-bottom: 0; }
+
+    .roadmap-phase__dot {
+      position: absolute;
+      left: -18px;
+      top: 3px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .roadmap-phase__dot--done { background: #22c55e; box-shadow: 0 0 0 2px #22c55e; }
+    .roadmap-phase__dot--active { background: var(--accent); box-shadow: 0 0 0 3px rgba(229,0,95,.25); }
+    .roadmap-phase__dot--upcoming { background: #cbd5e1; box-shadow: 0 0 0 2px #cbd5e1; }
+
+    .roadmap-phase__tag {
+      display: inline-block;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 20px;
+      margin-bottom: 5px;
+    }
+
+    .tag--done   { background: #dcfce7; color: #166534; }
+    .tag--active { background: #fff0f5; color: var(--accent); }
+    .tag--upcoming { background: #f1f5f9; color: #64748b; }
+
+    .roadmap-phase__title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .roadmap-phase__items {
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+
+    .roadmap-phase__period {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       3. PROCESS FLOW — ADA / WCAG Compliance
+    ───────────────────────────────────────────────────────────────── */
+    .process-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 0;
+      position: relative;
+    }
+
+    .pf-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      min-width: 100px;
+      position: relative;
+    }
+
+    .pf-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -14px;
+      top: 20px;
+      font-size: 18px;
+      color: var(--accent);
+      z-index: 2;
+    }
+
+    .pf-node {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      border: 2px solid;
+      position: relative;
+    }
+
+    .pf-node--audit    { background: #fff0f5; border-color: var(--accent); color: var(--accent); }
+    .pf-node--gap      { background: #fef9c3; border-color: #ca8a04; color: #ca8a04; }
+    .pf-node--remediate{ background: #eff6ff; border-color: #3b82f6; color: #3b82f6; }
+    .pf-node--test     { background: #f0fdf4; border-color: #16a34a; color: #16a34a; }
+    .pf-node--certify  { background: #f5f3ff; border-color: #7c3aed; color: #7c3aed; }
+    .pf-node--monitor  { background: #fff7ed; border-color: #ea580c; color: #ea580c; }
+
+    .pf-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
+      text-align: center;
+      margin-bottom: 3px;
+    }
+
+    .pf-desc {
+      font-size: 10.5px;
+      color: var(--text-soft);
+      text-align: center;
+      line-height: 1.45;
+      max-width: 88px;
+    }
+
+    .pf-standard-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .pf-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      border: 1px solid;
+    }
+
+    .pf-badge--aa   { background: #f0fdf4; border-color: #22c55e; color: #166534; }
+    .pf-badge--aaa  { background: #eff6ff; border-color: #3b82f6; color: #1d4ed8; }
+    .pf-badge--508  { background: #fff7ed; border-color: #f97316; color: #9a3412; }
+    .pf-badge--ada  { background: #faf5ff; border-color: #a855f7; color: #6b21a8; }
+
+    /* ─────────────────────────────────────────────────────────────────
+       4. HEATMAP — Initiative Impact vs Complexity
+    ───────────────────────────────────────────────────────────────── */
+    .heatmap-grid {
+      display: grid;
+      grid-template-columns: 28px repeat(5, 1fr);
+      grid-template-rows: repeat(5, 36px) 24px;
+      gap: 3px;
+      margin-bottom: 12px;
+    }
+
+    .hm-axis-y {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 9.5px;
+      color: var(--text-soft);
+      padding-right: 6px;
+      text-align: right;
+      line-height: 1.2;
+    }
+
+    .hm-cell {
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(255,255,255,.9);
+      cursor: default;
+      transition: transform .15s, box-shadow .15s;
+      text-align: center;
+      line-height: 1.2;
+      padding: 2px;
+    }
+
+    .hm-cell:hover {
+      transform: scale(1.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,.18);
+      z-index: 3;
+      position: relative;
+    }
+
+    .hm-axis-x-spacer { /* empty top-left corner */ }
+
+    .hm-axis-x {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9.5px;
+      color: var(--text-soft);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .hm-legend {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--text-soft);
+    }
+
+    .hm-legend-scale {
+      display: flex;
+      gap: 3px;
+    }
+
+    .hm-legend-scale span {
+      width: 20px;
+      height: 12px;
+      border-radius: 2px;
+      display: block;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       5. AI CAPABILITY MATURITY CHART (horizontal bars)
+    ───────────────────────────────────────────────────────────────── */
+    .horiz-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hbar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hbar-label {
+      font-size: 12px;
+      color: var(--text-soft);
+      width: 140px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .hbar-track {
+      flex: 1;
+      height: 14px;
+      background: #f1f5f9;
+      border-radius: 7px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hbar-fill {
+      height: 100%;
+      border-radius: 7px;
+      position: relative;
+      transition: width 1s cubic-bezier(.4,0,.2,1);
+    }
+
+    .hbar-pct {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-soft);
+      width: 36px;
+      text-align: left;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       6. DONUT CHART — Program Portfolio Mix
+    ───────────────────────────────────────────────────────────────── */
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .donut-legend__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--text-soft);
+    }
+
+    .donut-legend__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .donut-legend__val {
+      font-weight: 700;
+      color: var(--text);
+      margin-left: auto;
+      padding-left: 10px;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────
+       Section spacing
+    ───────────────────────────────────────────────────────────────── */
+    .viz-spacer { height: 22px; }
+
+    @media (max-width: 560px) {
+      .pf-step:not(:last-child)::after { display: none; }
+      .bar-chart-wrap { height: 160px; gap: 8px; }
+      .hbar-label { width: 90px; font-size: 10.5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <!-- ══ Hero intro ══════════════════════════════════════════════════ -->
+    <div class="ii-hero">
+      <div class="ii-hero__label">Enterprise Consulting — Since 2003</div>
+      <h1 class="ii-hero__headline">
+        <em>Digital</em> &amp; <em>Program</em> Excellence.<br />
+        AI-Powered. Outcome-Driven.
+      </h1>
+
+      <!-- Intro body + embedded pie chart side by side -->
+      <div class="ii-hero__body-wrap">
+        <p class="ii-hero__body">
+          Intelli Infotech is a trusted consulting partner for organisations navigating complex
+          <strong style="color:var(--text);">digital change</strong>. We bring end-to-end
+          <strong style="color:var(--text);">program management</strong> discipline,
+          <strong style="color:var(--text);">AI-augmented operating models</strong>, and deep expertise
+          in accessibility compliance — including ADA and WCAG — to help enterprises modernise with
+          confidence. From enterprise-wide transformation roadmaps to agile delivery governance and
+          inclusive digital experiences, we architect outcomes that scale and endure.
+        </p>
+
+        <!-- Embedded mini pie chart -->
+        <div class="ii-hero__pie-wrap">
+          <canvas id="heroPieCanvas" width="110" height="110"></canvas>
+          <div class="ii-hero__pie-legend" id="heroPieLegend"></div>
+        </div>
+      </div>
+
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat">
+          <strong>20+</strong>
+          <span>Years in Practice</span>
+        </div>
+        <div class="ii-hero__stat">
+          <strong>$2.4B+</strong>
+          <span>Portfolio Under Management</span>
+        </div>
+        <div class="ii-hero__stat">
+          <strong>38</strong>
+          <span>Enterprise Clients</span>
+        </div>
+        <div class="ii-hero__stat">
+          <strong>US &amp; India</strong>
+          <span>Delivery Centres</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ Services cards ══════════════════════════════════════════════ -->
+    <div class="ii-cards-label">What We Do</div>
+    <h2 class="ii-cards-title">Core Consulting Practices</h2>
+
+    <div class="ii-caps">
+
+      <div class="ii-cap">
+        <div class="ii-cap__icon">🚀</div>
+        <div class="ii-cap__title">Digital Transformation &amp; Program Management</div>
+        <ul class="ii-cap__list">
+          <li>Enterprise transformation roadmaps, PMO governance, and multi-workstream delivery orchestration</li>
+          <li>Operating model redesign, change management, and value-realisation tracking</li>
+        </ul>
+      </div>
+
+      <div class="ii-cap">
+        <div class="ii-cap__icon">🤖</div>
+        <div class="ii-cap__title">AI-Driven Process &amp; Data Modernisation</div>
+        <ul class="ii-cap__list">
+          <li>Intelligent automation, document intelligence, and AI decision-support workflow redesign</li>
+          <li>Enterprise data strategy, analytics enablement, and responsible AI governance frameworks</li>
+        </ul>
+      </div>
+
+      <div class="ii-cap">
+        <div class="ii-cap__icon">♿</div>
+        <div class="ii-cap__title">Accessibility, Compliance &amp; Cloud Advisory</div>
+        <ul class="ii-cap__list">
+          <li>ADA Title II/III, WCAG 2.2 AA/AAA, and Section 508 audit, remediation, and certification</li>
+          <li>Cloud migration strategy, DevSecOps adoption, and legacy estate rationalisation</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         VISUAL SHOWCASE — Sample Work & Insights
+    ══════════════════════════════════════════════════════════════════ -->
+    <div class="ii-visuals-section">
+      <div class="ii-cards-label">Sample Work &amp; Insights</div>
+      <h2 class="ii-cards-title">Illustrative Deliverables &amp; Frameworks</h2>
+      <p class="ii-visuals-intro">
+        The following samples illustrate the analytical rigour and strategic clarity we bring to every engagement —
+        from transformation maturity benchmarks to accessibility compliance process flows and initiative prioritisation heatmaps.
+      </p>
+
+      <!-- ROW 1: Bar Chart + Donut -->
+      <div class="viz-row-2" style="margin-bottom:22px;">
+
+        <!-- 1a. Grouped bar chart: Transformation Maturity by Domain -->
+        <div class="viz-panel">
+          <div class="viz-panel__title">Digital Maturity Benchmark</div>
+          <div class="viz-panel__sub">Client Avg vs Industry Benchmark — score out of 5.0</div>
+
+          <div class="bar-chart-wrap" id="barChartWrap">
+            <!-- Populated via JS -->
+          </div>
+
+          <div class="bar-chart-legend">
+            <div class="bar-chart-legend__item">
+              <div class="bar-chart-legend__dot" style="background:#e5005f;"></div>
+              Client Average
+            </div>
+            <div class="bar-chart-legend__item">
+              <div class="bar-chart-legend__dot" style="background:#94a3b8;"></div>
+              Industry Benchmark
+            </div>
+            <div class="bar-chart-legend__item">
+              <div class="bar-chart-legend__dot" style="background:#22c55e;"></div>
+              Post-Engagement Target
+            </div>
+          </div>
+        </div>
+
+        <!-- 1b. Donut chart: Program Portfolio Mix -->
+        <div class="viz-panel">
+          <div class="viz-panel__title">Program Portfolio Mix</div>
+          <div class="viz-panel__sub">Active engagement distribution by practice area</div>
+          <div class="donut-wrap">
+            <canvas id="donutCanvas" width="150" height="150"></canvas>
+            <div class="donut-legend" id="donutLegend">
+              <!-- Populated via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2: AI Capability Horizontal Bars -->
+      <div class="viz-panel" style="margin-bottom:22px;">
+        <div class="viz-panel__title">AI Capability Adoption — Measured Outcomes Across Engagements</div>
+        <div class="viz-panel__sub">Average improvement observed within 12 months of programme initiation</div>
+        <div class="horiz-bars" id="horizBars">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+
+      <!-- ROW 3: Roadmap + Process Flow -->
+      <div class="viz-row-3" style="margin-bottom:22px;">
+
+        <!-- Transformation Roadmap -->
+        <div class="viz-panel">
+          <div class="viz-panel__title">Enterprise Transformation Roadmap</div>
+          <div class="viz-panel__sub">Illustrative 18-month phased delivery model</div>
+
+          <div class="roadmap">
+
+            <div class="roadmap-phase">
+              <div class="roadmap-phase__dot roadmap-phase__dot--done"></div>
+              <span class="roadmap-phase__tag tag--done">✓ Complete</span>
+              <div class="roadmap-phase__period">Months 1–3</div>
+              <div class="roadmap-phase__title">Phase 1 — Assess &amp; Align</div>
+              <div class="roadmap-phase__items">
+                Current-state maturity assessment · Stakeholder mapping · Executive alignment workshops · KPI baseline &amp; business case approval
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="roadmap-phase__dot roadmap-phase__dot--done"></div>
+              <span class="roadmap-phase__tag tag--done">✓ Complete</span>
+              <div class="roadmap-phase__period">Months 4–6</div>
+              <div class="roadmap-phase__title">Phase 2 — Blueprint &amp; Prioritise</div>
+              <div class="roadmap-phase__items">
+                Target operating model design · Initiative backlog and scoring · Governance framework activation · PMO stand-up &amp; tooling
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="roadmap-phase__dot roadmap-phase__dot--active"></div>
+              <span class="roadmap-phase__tag tag--active">▶ In Flight</span>
+              <div class="roadmap-phase__period">Months 7–12</div>
+              <div class="roadmap-phase__title">Phase 3 — Execute &amp; Enable</div>
+              <div class="roadmap-phase__items">
+                Parallel workstream delivery · Change &amp; comms programme · AI pilot deployments · Accessibility remediation sprint cycles
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="roadmap-phase__dot roadmap-phase__dot--upcoming"></div>
+              <span class="roadmap-phase__tag tag--upcoming">↑ Upcoming</span>
+              <div class="roadmap-phase__period">Months 13–15</div>
+              <div class="roadmap-phase__title">Phase 4 — Scale &amp; Optimise</div>
+              <div class="roadmap-phase__items">
+                Capability scaling across business units · AI model performance monitoring · Adoption measurement &amp; reinforcement
+              </div>
+            </div>
+
+            <div class="roadmap-phase">
+              <div class="roadmap-phase__dot roadmap-phase__dot--upcoming"></div>
+              <span class="roadmap-phase__tag tag--upcoming">↑ Upcoming</span>
+              <div class="roadmap-phase__period">Months 16–18</div>
+              <div class="roadmap-phase__title">Phase 5 — Sustain &amp; Evolve</div>
+              <div class="roadmap-phase__items">
+                Value realisation reporting · Continuous improvement cadence · Knowledge transfer &amp; self-sufficiency handover
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ADA / WCAG Process Flow -->
+        <div class="viz-panel">
+          <div class="viz-panel__title">ADA / WCAG Compliance Process</div>
+          <div class="viz-panel__sub">Six-stage accessibility remediation lifecycle</div>
+
+          <div class="process-flow">
+            <div class="pf-step">
+              <div class="pf-node pf-node--audit">🔍</div>
+              <div class="pf-label">Audit</div>
+              <div class="pf-desc">Automated &amp; manual WCAG 2.2 audit</div>
+            </div>
+            <div class="pf-step">
+              <div class="pf-node pf-node--gap">📋</div>
+              <div class="pf-label">Gap Analysis</div>
+              <div class="pf-desc">Severity scoring &amp; legal risk mapping</div>
+            </div>
+            <div class="pf-step">
+              <div class="pf-node pf-node--remediate">🔧</div>
+              <div class="pf-label">Remediate</div>
+              <div class="pf-desc">Prioritised fix sprints per component</div>
+            </div>
+            <div class="pf-step">
+              <div class="pf-node pf-node--test">✅</div>
+              <div class="pf-label">Re-Test</div>
+              <div class="pf-desc">Assistive tech &amp; user testing</div>
+            </div>
+            <div class="pf-step">
+              <div class="pf-node pf-node--certify">🏅</div>
+              <div class="pf-label">Certify</div>
+              <div class="pf-desc">VPAT / ACR documentation</div>
+            </div>
+            <div class="pf-step">
+              <div class="pf-node pf-node--monitor">📡</div>
+              <div class="pf-label">Monitor</div>
+              <div class="pf-desc">Continuous scanning &amp; regression</div>
+            </div>
+          </div>
+
+          <div class="pf-standard-badges" style="margin-top:22px;">
+            <div class="pf-badge pf-badge--aa">✓ WCAG 2.2 AA</div>
+            <div class="pf-badge pf-badge--aaa">◎ WCAG AAA</div>
+            <div class="pf-badge pf-badge--508">§ Section 508</div>
+            <div class="pf-badge pf-badge--ada">⚖ ADA Title II/III</div>
+          </div>
+
+          <!-- Severity breakdown mini-bar -->
+          <div style="margin-top:22px;">
+            <div style="font-size:11px;font-weight:700;color:var(--text);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;">Typical Audit Finding Severity Mix</div>
+            <div id="severityBars"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 4: Heatmap — Initiative Impact vs Complexity -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Initiative Prioritisation Heatmap</div>
+        <div class="viz-panel__sub">Strategic impact (vertical) vs implementation complexity (horizontal) — darker = higher combined priority score</div>
+
+        <div class="heatmap-grid" id="heatmapGrid">
+          <!-- Populated via JS -->
+        </div>
+
+        <div class="hm-legend">
+          <span>Low priority</span>
+          <div class="hm-legend-scale" id="heatmapLegendScale"></div>
+          <span>High priority</span>
+          <span style="margin-left:18px;color:#94a3b8;">|</span>
+          <span style="margin-left:8px;color:var(--text-soft);">Hover cells to explore initiative details</span>
+        </div>
+      </div>
+
+    </div><!-- /ii-visuals-section -->
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+
+  <script>
+  /* ───────────────────────────────────────────────────────────────
+     HERO PIE CHART
+  ─────────────────────────────────────────────────────────────── */
+  (function buildHeroPie() {
+    const segments = [
+      { label: 'AI-Enabled Capabilities', pct: 45, color: '#a855f7' },
+      { label: 'Digital Transformation',  pct: 32, color: '#e5005f' },
+      { label: 'Program Management',      pct: 23, color: '#3b82f6' },
+    ];
+
+    const canvas = document.getElementById('heroPieCanvas');
+    const ctx    = canvas.getContext('2d');
+    const cx = 55, cy = 55, r = 52;
+    let start = -Math.PI / 2;
+
+    segments.forEach(seg => {
+      const angle = (seg.pct / 100) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, r, start, start + angle);
+      ctx.closePath();
+      ctx.fillStyle = seg.color;
+      ctx.fill();
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      start += angle;
+    });
+
+    // legend — no percentages
+    const legend = document.getElementById('heroPieLegend');
+    segments.forEach(seg => {
+      const item = document.createElement('div');
+      item.className = 'ii-hero__pie-legend-item';
+      item.innerHTML = `
+        <div class="ii-hero__pie-legend-dot" style="background:${seg.color};"></div>
+        <span>${seg.label}</span>
+      `;
+      legend.appendChild(item);
+    });
+  })();
+
+
+
+  /* ── Colour helpers ──────────────────────────────────────────── */
+  const ACCENT   = '#e5005f';
+  const STEEL    = '#94a3b8';
+  const GREEN    = '#22c55e';
+  const BLUE     = '#3b82f6';
+  const ORANGE   = '#f97316';
+  const PURPLE   = '#a855f7';
+  const GOLD     = '#eab308';
+
+  /* ───────────────────────────────────────────────────────────────
+     1. GROUPED BAR CHART — Digital Maturity Benchmark
+  ─────────────────────────────────────────────────────────────── */
+  (function buildBarChart() {
+    const domains = [
+      { label: 'Strategy',   client: 2.8, bench: 3.4, target: 4.2 },
+      { label: 'Data & AI',  client: 2.1, bench: 3.1, target: 4.4 },
+      { label: 'Cloud',      client: 3.2, bench: 3.5, target: 4.1 },
+      { label: 'CX',         client: 2.5, bench: 3.0, target: 4.0 },
+      { label: 'Ops',        client: 3.0, bench: 3.3, target: 4.2 },
+      { label: 'Security',   client: 2.4, bench: 3.2, target: 4.3 },
+    ];
+
+    const wrap = document.getElementById('barChartWrap');
+    const MAX  = 5.0;
+    const H    = 188; // usable bar height px
+
+    domains.forEach(d => {
+      const group = document.createElement('div');
+      group.className = 'bar-group';
+
+      const bars = [
+        { val: d.client, color: ACCENT },
+        { val: d.bench,  color: STEEL  },
+        { val: d.target, color: GREEN  },
+      ];
+
+      // mini cluster
+      const cluster = document.createElement('div');
+      cluster.style.cssText = 'display:flex;gap:3px;align-items:flex-end;width:100%;height:'+(H-24)+'px;';
+
+      bars.forEach(b => {
+        const bar = document.createElement('div');
+        const h = Math.round((b.val / MAX) * (H - 24));
+        bar.style.cssText = `flex:1;height:${h}px;background:${b.color};border-radius:3px 3px 0 0;transition:opacity .2s;`;
+        bar.title = `${b.val.toFixed(1)} / 5.0`;
+        bar.onmouseenter = () => bar.style.opacity = '.75';
+        bar.onmouseleave = () => bar.style.opacity = '1';
+        cluster.appendChild(bar);
+      });
+
+      // value label above (client)
+      const valEl = document.createElement('div');
+      valEl.className = 'bar-group__val';
+      valEl.textContent = d.client.toFixed(1);
+
+      const labelEl = document.createElement('div');
+      labelEl.style.cssText = 'font-size:10.5px;color:#64748b;margin-top:6px;text-align:center;white-space:nowrap;';
+      labelEl.textContent = d.label;
+
+      group.appendChild(valEl);
+      group.appendChild(cluster);
+      group.appendChild(labelEl);
+      wrap.appendChild(group);
+    });
+  })();
+
+
+  /* ───────────────────────────────────────────────────────────────
+     2. DONUT CHART — Program Portfolio Mix
+  ─────────────────────────────────────────────────────────────── */
+  (function buildDonut() {
+    const data = [
+      { label: 'Digital Transformation', pct: 34, color: ACCENT },
+      { label: 'Program Management',     pct: 22, color: BLUE   },
+      { label: 'AI Modernisation',       pct: 18, color: PURPLE },
+      { label: 'Accessibility',          pct: 14, color: GREEN  },
+      { label: 'Change Management',      pct: 12, color: GOLD   },
+    ];
+
+    const canvas = document.getElementById('donutCanvas');
+    const ctx    = canvas.getContext('2d');
+    const cx = 75, cy = 75, ro = 68, ri = 42;
+    let start = -Math.PI / 2;
+
+    data.forEach(seg => {
+      const angle = (seg.pct / 100) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, ro, start, start + angle);
+      ctx.closePath();
+      ctx.fillStyle = seg.color;
+      ctx.fill();
+      start += angle;
+    });
+
+    // cut inner circle
+    ctx.beginPath();
+    ctx.arc(cx, cy, ri, 0, Math.PI * 2);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+
+    // centre label
+    ctx.fillStyle = ACCENT;
+    ctx.font = 'bold 14px Outfit, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('38', cx, cy - 7);
+    ctx.fillStyle = '#94a3b8';
+    ctx.font = '9px Outfit, sans-serif';
+    ctx.fillText('CLIENTS', cx, cy + 8);
+
+    // legend
+    const legend = document.getElementById('donutLegend');
+    data.forEach(seg => {
+      const item = document.createElement('div');
+      item.className = 'donut-legend__item';
+      item.innerHTML = `
+        <div class="donut-legend__dot" style="background:${seg.color};"></div>
+        <span>${seg.label}</span>
+        <span class="donut-legend__val">${seg.pct}%</span>
+      `;
+      legend.appendChild(item);
+    });
+  })();
+
+
+  /* ───────────────────────────────────────────────────────────────
+     3. HORIZONTAL BARS — AI Capability Adoption
+  ─────────────────────────────────────────────────────────────── */
+  (function buildHorizBars() {
+    const items = [
+      { label: 'Process Automation',          pct: 74, color: ACCENT  },
+      { label: 'Intelligent Document Capture', pct: 68, color: BLUE   },
+      { label: 'Predictive Decision Support',  pct: 55, color: PURPLE },
+      { label: 'Conversational AI Interfaces', pct: 62, color: GREEN  },
+      { label: 'AI-Assisted QA & Testing',     pct: 71, color: ORANGE },
+      { label: 'Data-Driven Personalisation',  pct: 49, color: GOLD   },
+    ];
+
+    const wrap = document.getElementById('horizBars');
+    items.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'hbar-row';
+      row.innerHTML = `
+        <div class="hbar-label">${item.label}</div>
+        <div class="hbar-track">
+          <div class="hbar-fill" id="hb${i}" style="width:0%;background:${item.color};"></div>
+        </div>
+        <div class="hbar-pct">${item.pct}%</div>
+      `;
+      wrap.appendChild(row);
+      // animate on paint
+      requestAnimationFrame(() => setTimeout(() => {
+        document.getElementById('hb'+i).style.width = item.pct + '%';
+      }, 120 + i * 80));
+    });
+  })();
+
+
+  /* ───────────────────────────────────────────────────────────────
+     4. SEVERITY BARS inside Process Flow panel
+  ─────────────────────────────────────────────────────────────── */
+  (function buildSeverityBars() {
+    const items = [
+      { label: 'Critical',  pct: 18, color: '#ef4444' },
+      { label: 'High',      pct: 29, color: ORANGE    },
+      { label: 'Medium',    pct: 33, color: GOLD      },
+      { label: 'Low / Info',pct: 20, color: '#22c55e' },
+    ];
+    const wrap = document.getElementById('severityBars');
+    items.forEach(item => {
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex;align-items:center;gap:8px;margin-bottom:7px;';
+      row.innerHTML = `
+        <div style="width:72px;font-size:11px;color:#64748b;text-align:right;">${item.label}</div>
+        <div style="flex:1;height:10px;background:#f1f5f9;border-radius:5px;overflow:hidden;">
+          <div style="width:${item.pct}%;height:100%;background:${item.color};border-radius:5px;"></div>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:${item.color};width:28px;">${item.pct}%</div>
+      `;
+      wrap.appendChild(row);
+    });
+  })();
+
+
+  /* ───────────────────────────────────────────────────────────────
+     5. HEATMAP — Initiative Prioritisation
+  ─────────────────────────────────────────────────────────────── */
+  (function buildHeatmap() {
+    const yLabels = ['Critical', 'High', 'Medium', 'Low', 'Minimal']; // impact (top = high)
+    const xLabels = ['Trivial', 'Easy', 'Moderate', 'Complex', 'Transformational']; // complexity
+
+    // initiative labels per cell [row][col]  — empty string means no initiative label
+    const initiatives = [
+      ['AI Doc Intel','Cloud PMO','','Data Mesh',''],
+      ['WCAG Audit','','AI Chatbot','','ERP Migr.'],
+      ['','Process Auto','','CX Portal',''],
+      ['Mobile App','','Analytics Hub','',''],
+      ['','Branding','','Training LMS','Change Prog.'],
+    ];
+
+    // priority score 0–1 (drives colour intensity)
+    // high impact + low complexity = high priority
+    const scores = [
+      [0.95, 0.88, 0.70, 0.55, 0.38],
+      [0.85, 0.78, 0.65, 0.52, 0.34],
+      [0.70, 0.62, 0.50, 0.40, 0.28],
+      [0.55, 0.48, 0.38, 0.30, 0.18],
+      [0.38, 0.30, 0.22, 0.15, 0.08],
+    ];
+
+    // colour interpolation: light blush → deep accent
+    function scoreToColor(s) {
+      const r = Math.round(255 - s * (255 - 229));
+      const g = Math.round(240 - s * 240);
+      const b = Math.round(245 - s * (245 - 95));
+      return `rgb(${r},${g},${b})`;
+    }
+
+    const grid = document.getElementById('heatmapGrid');
+
+    yLabels.forEach((yL, ri) => {
+      // Y axis label
+      const yEl = document.createElement('div');
+      yEl.className = 'hm-axis-y';
+      yEl.textContent = yL;
+      grid.appendChild(yEl);
+
+      // cells
+      xLabels.forEach((xL, ci) => {
+        const cell = document.createElement('div');
+        cell.className = 'hm-cell';
+        const s = scores[ri][ci];
+        cell.style.background = scoreToColor(s);
+        if (initiatives[ri][ci]) {
+          cell.textContent = initiatives[ri][ci];
+          cell.style.color = s > 0.6 ? 'rgba(255,255,255,.93)' : 'rgba(80,0,30,.8)';
+        }
+        cell.title = `Impact: ${yL} | Complexity: ${xL} | Score: ${Math.round(s*100)}`;
+        grid.appendChild(cell);
+      });
+    });
+
+    // Bottom X-axis row
+    const spacer = document.createElement('div');
+    spacer.className = 'hm-axis-x-spacer';
+    grid.appendChild(spacer);
+    xLabels.forEach(xL => {
+      const xEl = document.createElement('div');
+      xEl.className = 'hm-axis-x';
+      xEl.textContent = xL;
+      grid.appendChild(xEl);
+    });
+
+    // Legend scale
+    const scaleWrap = document.getElementById('heatmapLegendScale');
+    for (let i = 0; i <= 10; i++) {
+      const s = i / 10;
+      const swatch = document.createElement('span');
+      swatch.style.background = scoreToColor(s);
+      scaleWrap.appendChild(swatch);
+    }
+  })();
+  </script>
+
+</body>
+</html>

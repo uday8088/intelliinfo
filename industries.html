@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries – Intelli Infotech Inc.</title>
+  <meta name="description" content="Industry expertise at Intelli Infotech — Retail, IT, Hospitality, Manufacturing, Education, Healthcare, Music, and Call Centers." />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <style>
+    /* 2-column card grid */
+    .ii-industry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .ii-industry-card {
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
+      background: var(--stripe);
+      padding: 18px 20px 16px;
+    }
+
+    .ii-industry-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .ii-industry-card h3 a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .ii-industry-card h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .ii-industry-card ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ii-industry-card ul li {
+      padding: 4px 0;
+      font-size: var(--text-base);
+      line-height: var(--lh);
+      color: var(--text);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .ii-industry-card ul li::before {
+      content: '▶';
+      font-size: 8px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 640px) {
+      .ii-industry-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar injected by navbar-loader.js -->
+  <div id="navbar-container"></div>
+
+  <main class="ii-main">
+
+    <h1 class="ii-section-heading">Industry Expertise</h1>
+
+    <p class="ii-intro">
+      During the past two decades, we have gained extensive experience in the following industries:
+    </p>
+
+    <div class="ii-industry-grid">
+
+      <!-- Retail -->
+      <div class="ii-industry-card">
+        <h3><a href="retail.html">Retail</a></h3>
+        <ul>
+          <li>Point of sale software (POS)</li>
+          <li>Order and delivery management system</li>
+          <li>Merchandising and supply networks</li>
+          <li>Customer relationship management systems</li>
+          <li>Accounting software</li>
+          <li>Warehouse management software</li>
+        </ul>
+      </div>
+
+      <!-- IT -->
+      <div class="ii-industry-card">
+        <h3><a href="it.html">IT</a></h3>
+        <ul>
+          <li>Research &amp; Development (R&amp;D)</li>
+          <li>Software architecture design</li>
+          <li>Software application development</li>
+          <li>Quality assurance</li>
+          <li>Generation of technical documentation</li>
+          <li>Software migration or re-engineering</li>
+          <li>Maintenance and support</li>
+        </ul>
+      </div>
+
+      <!-- Hospitality -->
+      <div class="ii-industry-card">
+        <h3><a href="hospitality.html">Hospitality — Restaurants &amp; Hotels</a></h3>
+        <ul>
+          <li>Point of sale solutions</li>
+          <li>Online booking solutions (rooms, tables, etc.)</li>
+          <li>Reservations management</li>
+          <li>Customer relationship management systems (CRM)</li>
+          <li>Planning software for furniture placement</li>
+          <li>Event planning with hall plans and guest list management</li>
+        </ul>
+      </div>
+
+      <!-- Manufacturing -->
+      <div class="ii-industry-card">
+        <h3>Manufacturing</h3>
+        <ul>
+          <li>Enterprise resource planning (ERP) software</li>
+          <li>Industrial equipment state monitoring</li>
+          <li>Purchasing software solutions</li>
+          <li>Inventory control software</li>
+          <li>Staff control software</li>
+          <li>Automation solutions for warehouses and supply chains</li>
+          <li>Monitoring solutions for equipment and labor productivity</li>
+          <li>Quality monitoring and automation solutions</li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div class="ii-industry-card">
+        <h3><a href="education.html">Education</a></h3>
+        <ul>
+          <li>Courseware</li>
+          <li>Classroom aids</li>
+          <li>Reference software</li>
+          <li>Software for corporate training, tertiary education, and post-graduates</li>
+          <li>Educational web portals</li>
+          <li>Mobile educational software</li>
+        </ul>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="ii-industry-card">
+        <h3><a href="healthcare.html">Healthcare</a></h3>
+        <ul>
+          <li>Electronic health / medical record (EHR or EMR)</li>
+          <li>Medical practice management software</li>
+          <li>Healthcare management (health system management) software</li>
+          <li>Educational medical software</li>
+          <li>R&amp;D, pharmacy, red and white biotechnology</li>
+        </ul>
+      </div>
+
+      <!-- Music -->
+      <div class="ii-industry-card">
+        <h3><a href="music.html">Music</a></h3>
+        <ul>
+          <li>Solutions for media player (web and desktop) functionalities</li>
+          <li>Web music applications and plug-ins</li>
+          <li>Complex web and desktop music solutions for entertainment</li>
+          <li>Professional music editing applications, digital audio editors</li>
+          <li>Audio recording applications</li>
+          <li>Voice recognition software</li>
+          <li>Media storage web portals</li>
+          <li>Composing and notation software solutions</li>
+          <li>Audio tools for complex projects</li>
+        </ul>
+      </div>
+
+      <!-- Call Centers -->
+      <div class="ii-industry-card">
+        <h3><a href="call-center.html">Call Centers</a></h3>
+        <ul>
+          <li>Network-based Automated Call Distribution (ACD)</li>
+          <li>Web-based agent workplace</li>
+          <li>Web-based manager workplace</li>
+          <li>Workforce management systems</li>
+          <li>Call recording systems</li>
+          <li>Reporting</li>
+          <li>Schedule optimisation solutions</li>
+          <li>Customer relationship management systems (CRM)</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer injected by footer-loader.js -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

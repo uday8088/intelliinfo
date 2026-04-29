@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program &amp; Project Management — Intelli Infotech Inc.</title>
+  <meta name="description" content="End-to-end PMO, delivery governance, and program execution services for government and enterprise clients." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--font:'Aptos','Outfit','Segoe UI',ui-sans-serif,system-ui,sans-serif;}</style>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .ii-hero{background:linear-gradient(135deg,#fff 60%,#fff0f5 100%);border-left:4px solid var(--accent);padding:28px 28px 24px 24px;margin-bottom:36px;border-radius:0 4px 4px 0;}
+    .ii-hero__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    .ii-hero__headline{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px;letter-spacing:-.3px;}
+    .ii-hero__headline em{color:var(--accent);font-style:normal;}
+    .ii-hero__body{font-size:15px;line-height:1.75;color:var(--text-soft);max-width:820px;margin:0 0 18px;}
+    .ii-hero__stats{display:flex;gap:32px;margin-top:22px;flex-wrap:wrap;}
+    .ii-hero__stat strong{display:block;font-size:22px;font-weight:700;color:var(--accent);line-height:1;}
+    .ii-hero__stat span{font-size:12px;color:var(--text-soft);letter-spacing:.03em;}
+    .ii-sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .ii-sec-title{font-size:19px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+    .viz-panel{background:#fff;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:0 0 6px 6px;padding:22px 22px 18px;margin-bottom:22px;}
+    .viz-panel__title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:4px;}
+    .viz-panel__sub{font-size:12px;color:var(--text-soft);margin-bottom:18px;}
+    .viz-row-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px;}
+    @media(max-width:820px){.viz-row-2{grid-template-columns:1fr;}}
+
+    /* ── PMO Pillars ── */
+    .pmo-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;}
+    .pmo-pillar{border:1px solid var(--border);border-radius:6px;padding:18px 16px;background:#fff;border-top:3px solid;}
+    .pmo-pillar__icon{font-size:22px;margin-bottom:8px;}
+    .pmo-pillar__title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;}
+    .pmo-pillar__body{font-size:12.5px;line-height:1.6;color:var(--text-soft);}
+    @media(max-width:700px){.pmo-pillars{grid-template-columns:1fr;}}
+
+    /* ── Gantt-style roadmap ── */
+    .gantt{width:100%;border-collapse:collapse;}
+    .gantt th{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-soft);padding:4px 8px;border-bottom:2px solid var(--border);text-align:left;}
+    .gantt td{padding:6px 8px;border-bottom:1px solid #f1f5f9;font-size:12.5px;color:var(--text-soft);vertical-align:middle;}
+    .gantt tr:last-child td{border-bottom:none;}
+    .gantt td:first-child{font-weight:600;color:var(--text);width:160px;}
+    .gantt-bar-cell{position:relative;height:20px;}
+    .gantt-bar{position:absolute;top:2px;height:16px;border-radius:3px;display:flex;align-items:center;padding:0 6px;}
+    .gantt-bar span{font-size:10px;color:#fff;font-weight:600;white-space:nowrap;}
+
+    /* ── RAG status ── */
+    .rag-table{width:100%;border-collapse:collapse;}
+    .rag-table th{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-soft);padding:4px 8px;border-bottom:2px solid var(--border);text-align:left;}
+    .rag-table td{padding:8px 8px;border-bottom:1px solid #f1f5f9;font-size:12.5px;color:var(--text-soft);vertical-align:middle;}
+    .rag-table tr:last-child td{border-bottom:none;}
+    .rag-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;}
+    .rag-r{background:#fee2e2;color:#dc2626;}
+    .rag-a{background:#fef9c3;color:#92400e;}
+    .rag-g{background:#dcfce7;color:#166534;}
+
+    /* ── Hbar ── */
+    .hbar-row{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
+    .hbar-label{font-size:12px;color:var(--text-soft);width:180px;flex-shrink:0;text-align:right;}
+    .hbar-track{flex:1;height:13px;background:#f1f5f9;border-radius:7px;overflow:hidden;}
+    .hbar-fill{height:100%;border-radius:7px;transition:width 1s cubic-bezier(.4,0,.2,1);}
+    .hbar-pct{font-size:11px;font-weight:700;color:var(--text-soft);width:36px;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Government Services — Program &amp; Project Management</div>
+      <h1 class="ii-hero__headline">Complex Programs.<br/><em>Governed</em> Tightly. <em>Delivered</em> Reliably.</h1>
+      <p class="ii-hero__body">From PMO stand-up to multi-workstream execution, we provide the governance frameworks, executive reporting, and on-the-ground delivery muscle that turns strategy into outcomes — on time and on budget.</p>
+      <div class="ii-hero__stats">
+        <div class="ii-hero__stat"><strong>20+</strong><span>Years in Practice</span></div>
+        <div class="ii-hero__stat"><strong>$550M+</strong><span>Career Portfolio Value</span></div>
+        <div class="ii-hero__stat"><strong>Multi-sector</strong><span>Gov, Health &amp; Enterprise</span></div>
+        <div class="ii-hero__stat"><strong>Agile &amp; Waterfall</strong><span>Delivery Expertise</span></div>
+      </div>
+    </div>
+
+    <!-- PMO Pillars -->
+    <div class="ii-sec-label">Our Approach</div>
+    <h2 class="ii-sec-title">PMO Service Pillars</h2>
+    <div class="pmo-pillars">
+      <div class="pmo-pillar" style="border-top-color:#e5005f;">
+        <div class="pmo-pillar__icon">🏗️</div>
+        <div class="pmo-pillar__title">PMO Establishment</div>
+        <div class="pmo-pillar__body">Governance charter, tooling, RACI frameworks, and reporting cadences — stood up and operational in weeks.</div>
+      </div>
+      <div class="pmo-pillar" style="border-top-color:#3b82f6;">
+        <div class="pmo-pillar__icon">📡</div>
+        <div class="pmo-pillar__title">Delivery Orchestration</div>
+        <div class="pmo-pillar__body">Multi-workstream coordination, dependency mapping, risk registers, and integrated master schedules.</div>
+      </div>
+      <div class="pmo-pillar" style="border-top-color:#a855f7;">
+        <div class="pmo-pillar__icon">📊</div>
+        <div class="pmo-pillar__title">Executive Reporting</div>
+        <div class="pmo-pillar__body">RAG dashboards, steering decks, EVM metrics, and real-time status — always current, always clear.</div>
+      </div>
+      <div class="pmo-pillar" style="border-top-color:#22c55e;">
+        <div class="pmo-pillar__icon">⚠️</div>
+        <div class="pmo-pillar__title">Risk &amp; Issue Management</div>
+        <div class="pmo-pillar__body">Proactive identification, scoring, mitigation planning, and escalation paths built into every program.</div>
+      </div>
+      <div class="pmo-pillar" style="border-top-color:#f97316;">
+        <div class="pmo-pillar__icon">🔄</div>
+        <div class="pmo-pillar__title">Agile &amp; Hybrid Delivery</div>
+        <div class="pmo-pillar__body">SAFe, Scrum, and waterfall blend — right-sized for government compliance and delivery velocity.</div>
+      </div>
+      <div class="pmo-pillar" style="border-top-color:#eab308;">
+        <div class="pmo-pillar__icon">📋</div>
+        <div class="pmo-pillar__title">Vendor Assurance</div>
+        <div class="pmo-pillar__body">Third-party performance monitoring, SLA enforcement, and contract milestone verification.</div>
+      </div>
+    </div>
+
+    <div class="viz-row-2">
+      <!-- Gantt sample -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Sample Integrated Program Schedule</div>
+        <div class="viz-panel__sub">Illustrative 6-month delivery view — Q1 through Q2</div>
+        <table class="gantt">
+          <thead>
+            <tr>
+              <th>Workstream</th>
+              <th style="width:55%;">Timeline (Q1 — Q2)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="ganttBody"></tbody>
+        </table>
+      </div>
+
+      <!-- RAG dashboard -->
+      <div class="viz-panel">
+        <div class="viz-panel__title">Program Health Dashboard (RAG)</div>
+        <div class="viz-panel__sub">Illustrative real-time workstream status view</div>
+        <table class="rag-table">
+          <thead>
+            <tr><th>Workstream</th><th>Schedule</th><th>Budget</th><th>Risk</th></tr>
+          </thead>
+          <tbody id="ragBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Delivery outcomes hbars -->
+    <div class="viz-panel">
+      <div class="viz-panel__title">Measured Program Outcomes</div>
+      <div class="viz-panel__sub">Average results across completed government engagements</div>
+      <div id="ppmHbars"></div>
+    </div>
+
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script>
+    // Gantt
+    (function(){
+      const rows=[
+        {name:'Discovery & Baseline',start:0,len:20,color:'#e5005f'},
+        {name:'PMO Stand-Up',start:15,len:15,color:'#3b82f6'},
+        {name:'Workstream A — Tech',start:28,len:40,color:'#a855f7'},
+        {name:'Workstream B — Policy',start:28,len:35,color:'#22c55e'},
+        {name:'UAT & Compliance',start:68,len:18,color:'#f97316'},
+        {name:'Go-Live & Transition',start:85,len:15,color:'#e5005f'},
+      ];
+      const tb=document.getElementById('ganttBody');
+      const months=['Jan','Feb','Mar','Apr','May','Jun'];
+      rows.forEach(r=>{
+        const tr=document.createElement('tr');
+        const barHTML=`<div class="gantt-bar-cell" style="width:100%;">
+          <div class="gantt-bar" style="left:${r.start}%;width:${r.len}%;background:${r.color};">
+            <span>${r.name.split(' ')[0]}</span>
+          </div>
+        </div>`;
+        tr.innerHTML=`<td>${r.name}</td><td>${barHTML}</td><td><span class="rag-badge rag-g">On Track</span></td>`;
+        tb.appendChild(tr);
+      });
+    })();
+
+    // RAG
+    (function(){
+      const rows=[
+        {ws:'PMO Governance',sched:'G',budget:'G',risk:'G'},
+        {ws:'Digital Modernization',sched:'G',budget:'A',risk:'A'},
+        {ws:'Data Migration',sched:'A',budget:'G',risk:'R'},
+        {ws:'Compliance & ADA',sched:'G',budget:'G',risk:'G'},
+        {ws:'Vendor Integration',sched:'A',budget:'A',risk:'G'},
+      ];
+      const tb=document.getElementById('ragBody');
+      const cls={G:'rag-g',A:'rag-a',R:'rag-r'};
+      const lbl={G:'Green',A:'Amber',R:'Red'};
+      rows.forEach(r=>{
+        tb.innerHTML+=`<tr>
+          <td style="font-weight:600;color:var(--text);">${r.ws}</td>
+          <td><span class="rag-badge ${cls[r.sched]}">${lbl[r.sched]}</span></td>
+          <td><span class="rag-badge ${cls[r.budget]}">${lbl[r.budget]}</span></td>
+          <td><span class="rag-badge ${cls[r.risk]}">${lbl[r.risk]}</span></td>
+        </tr>`;
+      });
+    })();
+
+    // Hbars
+    (function(){
+      const items=[
+        {label:'On-Time Delivery',pct:87,color:'#e5005f'},
+        {label:'Within-Budget Rate',pct:81,color:'#3b82f6'},
+        {label:'Risk Issues Resolved',pct:92,color:'#22c55e'},
+        {label:'Stakeholder Satisfaction',pct:94,color:'#a855f7'},
+        {label:'Scope Change Control',pct:78,color:'#f97316'},
+      ];
+      const wrap=document.getElementById('ppmHbars');
+      items.forEach((it,i)=>{
+        wrap.innerHTML+=`<div class="hbar-row"><div class="hbar-label">${it.label}</div><div class="hbar-track"><div class="hbar-fill" id="phb${i}" style="width:0%;background:${it.color}"></div></div><div class="hbar-pct">${it.pct}%</div></div>`;
+      });
+      items.forEach((_,i)=>setTimeout(()=>{document.getElementById('phb'+i).style.width=items[i].pct+'%';},150+i*80));
+    })();
+  </script>
+</body>
+</html>

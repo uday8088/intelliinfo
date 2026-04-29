@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Management – Intelli Infotech Inc.</title>
+  <meta name="description" content="How Intelli Infotech manages client relationships — from negotiation to delivery and IP protection." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <style>
+    .ii-hero { background: linear-gradient(135deg,#fff 60%,#fff0f5 100%); border-left: 4px solid var(--accent); padding: 24px 28px 20px 24px; margin-bottom: 28px; border-radius: 0 4px 4px 0; }
+    .ii-hero__label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .ii-hero__headline { font-size: 24px; font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 10px; letter-spacing: -.3px; }
+    .ii-hero__headline em { color: var(--accent); font-style: normal; }
+    .ii-hero__body { font-size: 14px; line-height: 1.7; color: var(--text-soft); max-width: 780px; }
+    .ii-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .ii-card { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 20px 18px 18px; border-radius: 0 0 4px 4px; transition: transform .22s,box-shadow .22s,border-top-color .22s; cursor: default; }
+    .ii-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(229,0,95,.10),0 2px 8px rgba(0,0,0,.07); border-top-color: var(--accent-dark); }
+    .ii-card__icon { font-size: 22px; margin-bottom: 10px; }
+    .ii-card__title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .ii-card__body { font-size: 13px; line-height: 1.65; color: var(--text-soft); margin: 0; padding: 0; }
+    .ii-card__body li { list-style: none; padding: 3px 0; display: flex; gap: 7px; align-items: flex-start; }
+    .ii-card__body li::before { content: '–'; color: var(--accent); flex-shrink: 0; font-weight: 700; }
+    @media (max-width: 860px) { .ii-cards { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 520px) { .ii-cards { grid-template-columns: 1fr; } .ii-hero__headline { font-size: 20px; } }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="ii-main">
+
+    <div class="ii-hero">
+      <div class="ii-hero__label">Work Approach — Client Management</div>
+      <h1 class="ii-hero__headline">How We <em>Work With You</em></h1>
+      <p class="ii-hero__body">From first contact to final delivery — a clear, fair, and transparent process every step of the way.</p>
+    </div>
+
+    <div class="ii-cards">
+
+      <div class="ii-card">
+        <div class="ii-card__icon">🤝</div>
+        <div class="ii-card__title">Negotiation Stage</div>
+        <ul class="ii-card__body">
+          <li>Define your requirements and project goals</li>
+          <li>Architecture design, prototypes, and design samples</li>
+          <li>Project plan, timeline, and delivery method agreed</li>
+          <li>Time, cost, and contract terms finalised</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">⚙️</div>
+        <div class="ii-card__title">Work Stage</div>
+        <ul class="ii-card__body">
+          <li>Dedicated Project Manager as your single point of contact</li>
+          <li>Qualified team assembled specifically for your project</li>
+          <li>Daily, weekly, and monthly status reports</li>
+          <li>Quality assurance and on-time deployment</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">🔒</div>
+        <div class="ii-card__title">IP &amp; Confidentiality</div>
+        <ul class="ii-card__body">
+          <li>All staff sign NDA before work begins</li>
+          <li>All delivered code is owned by you — in perpetuity</li>
+          <li>Strict IP policy across all engagements</li>
+          <li>Ideas and information contained in deliverables belong to you</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">💬</div>
+        <div class="ii-card__title">Communication</div>
+        <ul class="ii-card__body">
+          <li>Email, phone, and video at times convenient to you</li>
+          <li>Efficient tracking via Jira, GitHub, or your preferred tool</li>
+          <li>Transparent, honest progress reporting at every stage</li>
+        </ul>
+      </div>
+
+      <div class="ii-card">
+        <div class="ii-card__icon">⭐</div>
+        <div class="ii-card__title">Our Commitment</div>
+        <ul class="ii-card__body">
+          <li>Professional conduct from inquiry through to support</li>
+          <li>Fair and friendly long-term relationships</li>
+          <li>Every effort made to exceed your expectations</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="assets/js/navbar-loader.js"></script>
+  <script src="assets/js/footer-loader.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
